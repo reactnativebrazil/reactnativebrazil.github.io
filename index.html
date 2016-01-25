@@ -128,10 +128,89 @@
 <div class="clearfix"></div>
 
 	<header class="entry-header top10">
-		<h1 class="entry-title"><a href="http://reactnativebrazil.github.io/comecando/" rel="bookmark">Começando</a></h1>		
-	</header><!-- .entry-header -->
-	<div class="entry-content">
-					<p>JSFiddle &nbsp; A maneira mais fácil de começar a cortar em React está usando os seguintes exemplos JSFiddle Olá Mundo</p>
+		<h2>JSFiddle</h2>
+		<p> <br>
+		  </p>
+		<ol>
+		  <li><span lang="pt"><span lang="pt">A maneira mais fácil de começar a cortar em React está usando os seguintes exemplos JSFiddle Olá Mundo :<br>
+		    <strong><a href="https://jsfiddle.net/reactjs/69z2wepo/" data-mce-href="https://jsfiddle.net/reactjs/69z2wepo/">React JSFiddle</a></strong><br>
+		    <a href="https://jsfiddle.net/reactjs/5vjqabv3/" data-mce-href="https://jsfiddle.net/reactjs/5vjqabv3/">React JSFiddle without JSX</a></span></span><br data-mce-bogus="1">
+		    </li>
+		  <li>
+		    <h2>Usando React a partir de npm</h2>
+		    <p>Recomendamos o uso de React com um sistema de módulos commonJS como <a href="http://browserify.org/" data-mce-href="http://browserify.org/">browserify</a> ou <a href="https://webpack.github.io/" data-mce-href="https://webpack.github.io/">webpack</a> . Use os pacotes da  <a href="https://www.npmjs.com/package/react" data-mce-href="https://www.npmjs.com/package/react">react</a> e  <a href="https://www.npmjs.com/package/react-dom" data-mce-href="https://www.npmjs.com/package/react-dom">react-dom</a> npm</p>
+		    </li>
+		  <li>
+		    <pre>// main.js  var React = require('react');  var ReactDOM = require('react-dom');    ReactDOM.render(    &lt;h1&gt;Hello, world!&lt;/h1&gt;,    document.getElementById('example')  );  </pre>
+		    </li>
+		  <li>
+		    <pre id="tw-target-text" dir="ltr" data-fulltext="" data-placeholder="Tradução"><span lang="pt">Para instalar React DOM e construir o seu pacote com browserify </span></pre>
+		    <div>
+		      <pre>$ npm install --save react react-dom babelify babel-preset-react  $ browserify -t [ babelify --presets [ react ] ] main.js -o bundle.js  </pre>
+		      </div>
+		    <pre id="tw-target-text" dir="ltr" data-fulltext="" data-placeholder="Tradução"><span lang="pt">Para instalar React DOM e construir o seu pacote com Webpack</span></pre>
+		    <p>:</p>
+		    <div>
+		      <pre>$ npm install --save react react-dom babel-preset-react  $ webpack  </pre>
+		      </div>
+		    <blockquote>
+		      <p>Nota:</p>
+		      <pre id="tw-target-text" dir="ltr" data-fulltext="" data-placeholder="Tradução"><span lang="pt">Se você estiver usando ES2015 , você vai querer usar também o</span></pre>
+		      <p>babel-preset-es2015 package.</p>
+		      </blockquote>
+		    <p><strong>Nota: P</strong><span lang="pt">or   padrão , React será no modo de desenvolvimento , que é mais lento , e   não aconselhável para a produção. Para usar React no modo de produção ,   defina a variável de ambiente</span></p>
+		    <p>NODE_ENV to production (<span lang="pt">usando envify ou </span>webpack's DefinePlugin). por exemplo:</p>
+		    <div>
+		      <pre>new webpack.DefinePlugin({    "process.env": {      NODE_ENV: JSON.stringify("production")    }  });  </pre>
+		      </div>
+		    <h2><a name="quick-start-without-npm"></a><span lang="pt">Início Rápido Sem</span> npm</h2>
+		    <p><span lang="pt">Se   você não está pronto para usar npm no entanto, você pode baixar o   starter kit que inclui cópias pré-construídos de React e React DOM.</span></p>
+		    <div><a href="https://facebook.github.io/react/downloads/react-0.14.6.zip" data-mce-href="https://facebook.github.io/react/downloads/react-0.14.6.zip"> Download Starter Kit 0.14.6 </a><br data-mce-bogus="1">
+		      </div>
+		    <p><span lang="pt">No diretório raiz do kit inicial , criar uma </span>helloworld.html <span lang="pt">com os seguintes conteúdos .</span></p>
+		    <div>
+		      <pre>&lt;!DOCTYPE html&gt;  &lt;html&gt;    &lt;head&gt;      &lt;meta charset="UTF-8" /&gt;      &lt;title&gt;Hello React!&lt;/title&gt;      &lt;script src="build/react.js"&gt;&lt;/script&gt;      &lt;script src="build/react-dom.js"&gt;&lt;/script&gt;      &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"&gt;&lt;/script&gt;    &lt;/head&gt;    &lt;body&gt;      &lt;div id="example"&gt;&lt;/div&gt;      &lt;script type="text/babel"&gt;        ReactDOM.render(          &lt;h1&gt;Hello, world!&lt;/h1&gt;,          document.getElementById('example')        );      &lt;/script&gt;    &lt;/body&gt;  &lt;/html&gt;  </pre>
+		      </div>
+		    <p><span lang="pt">A sintaxe XML dentro do JavaScript é chamada JSX ; vá para a <a href="https://facebook.github.io/react/docs/jsx-in-depth.html" data-mce-href="https://facebook.github.io/react/docs/jsx-in-depth.html">JSX syntax</a> para aprender mais sobre ele. A fim de traduzi-lo para baunilha   JavaScript usamos &lt;script type = "text / babel "&gt; e incluem Babel   para realmente executar a transformação no navegador.</span></p>
+		    <h3><a name="separate-file"></a><span lang="pt">Arquivo separado</span></h3>
+		    <p><span lang="pt">Seu React código JSX pode viver em um arquivo separado . Crie o seguinte</span></p>
+		    <p>src/helloworld.js.</p>
+		    <div>
+		      <pre>ReactDOM.render(    &lt;h1&gt;Hello, world!&lt;/h1&gt;,    document.getElementById('example')  );  </pre>
+		      </div>
+		    <p><span lang="pt">Em seguida, referenciá-lo a partir de </span>helloworld.html:</p>
+		    <div>
+		      <pre>&lt;script type="text/babel" src="src/helloworld.js"&gt;&lt;/script&gt;  </pre>
+		      </div>
+		    <p><span lang="pt">Observe que alguns navegadores ( Chrome , por exemplo ) não poderá carregar o arquivo a menos que seja servido através de HTTP.</span></p>
+		    <h3><a name="offline-transform"></a>Offline Transform</h3>
+		    <p><span lang="pt">Primeiro instale as ferramentas de linha de comando <a href="http://babeljs.io/" data-mce-href="http://babeljs.io/">Babel</a> ( requer <a href="https://www.npmjs.com/" data-mce-href="https://www.npmjs.com/">npm</a> ) :</span></p>
+		    <div>
+		      <pre>npm install --global babel-cli  npm install babel-preset-react  </pre>
+		      </div>
+		    <p><span lang="pt">Em seguida, traduzir o seu </span>src/helloworld.js <span lang="pt">arquivo de JavaScript simples :</span></p>
+		    <div>
+		      <pre>babel --presets react src --watch --out-dir build  </pre>
+		      </div>
+		    <blockquote>
+		      <p>Nota:</p>
+		      <p><span lang="pt">Se você estiver usando ES2015 , você vai querer usar também o </span>babel-preset-es2015 package.</p>
+		      </blockquote>
+		    <p><span lang="pt">O arquivo </span>build/helloworld.js <span lang="pt">é gerado automaticamente sempre que você fizer uma mudança. Leia o</span> <a href="http://babeljs.io/docs/usage/cli/" data-mce-href="http://babeljs.io/docs/usage/cli/">Babel CLI documentation</a> <span lang="pt">para um uso mais avançado.</span></p>
+		    <div>
+		      <pre>ReactDOM.render(    React.createElement('h1', null, 'Hello, world!'),    document.getElementById('example')  );  </pre>
+		      </div>
+		    <p><span lang="pt">Atualize seu arquivo HTML como abaixo:</span></p>
+		    <div>
+		      <pre>&lt;!DOCTYPE html&gt;  &lt;html&gt;    &lt;head&gt;      &lt;meta charset="UTF-8" /&gt;      &lt;title&gt;Hello React!&lt;/title&gt;      &lt;script src="build/react.js"&gt;&lt;/script&gt;      &lt;script src="build/react-dom.js"&gt;&lt;/script&gt;      &lt;!-- No need for Babel! --&gt;    &lt;/head&gt;    &lt;body&gt;      &lt;div id="example"&gt;&lt;/div&gt;      &lt;script src="build/helloworld.js"&gt;&lt;/script&gt;    &lt;/body&gt;  &lt;/html&gt;  </pre>
+		      </div>
+		    <h2><a name="next-steps"></a><span lang="pt">Próximos passos</span></h2>
+		    <p><span lang="pt">Confira o <a href="https://facebook.github.io/react/docs/tutorial.html" target="_blank" data-mce-href="https://facebook.github.io/react/docs/tutorial.html">tutorial</a> e os outros exemplos no diretório de exemplos do kit inicial para saber   mais. Temos também um wiki onde a comunidade contribui com </span><a href="https://github.com/facebook/react/wiki/Complementary-Tools" data-mce-href="https://github.com/facebook/react/wiki/Complementary-Tools">workflows, UI-components, routing, data management etc.</a><br data-mce-bogus="1">
+		      </p>
+		    <p><span lang="pt">Boa sorte, e bem-vindo!</span></p>
+		    </li>
+		  </ol>
+		<h1 class="entry-title"> fácil de começar a cortar em React está usando os seguintes exemplos JSFiddle Olá Mundo</h1></header><div class="entry-content">
 			</div><!-- .entry-content -->
 	<footer class="entry-footer">
 		<div class="row">
