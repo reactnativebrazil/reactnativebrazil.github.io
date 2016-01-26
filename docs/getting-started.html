@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+<!-- Mirrored from facebook.github.io/react/docs/getting-started.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Jan 2016 10:36:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Getting Started | React</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:title" content="Getting Started | React">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="getting-started.html">
+  <meta property="og:image" content="../img/logo_og.png">
+  <meta property="og:description" content="A JavaScript library for building user interfaces">
+  <meta property="fb:app_id" content="623268441017527">
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="React" href="../feed.xml">
+
+  <link rel="stylesheet" href="../css/syntax.css">
+  <link rel="stylesheet" href="../css/codemirror.css">
+  <link rel="stylesheet" href="../css/react.css">
+
+  <script src="../../../use.typekit.net/vqa1hcx.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
+  <!--[if lte IE 8]>
+  <script src="/react/js/html5shiv.min.js"></script>
+  <script src="/react/js/es5-shim.min.js"></script>
+  <script src="/react/js/es5-sham.min.js"></script>
+  <![endif]-->
+  <script src="../js/codemirror.js"></script>
+  <script src="../js/javascript.js"></script>
+  <script src="../js/react.js"></script>
+  <script src="../js/react-dom.js"></script>
+  <script src="../js/babel-browser.min.js"></script>
+  <script src="../js/live_editor.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="nav-main">
+      <div class="wrap"> <a class="nav-home" href="../index-2.html"> <img src="img/logo.svg" alt="" width="36" height="36" class="nav-logo"> React </a>
+        <ul class="nav-site nav-site-internal">
+          <li><a href="../docs/getting-started.html">Documentação</a></li>
+          <li><a href="../support.html">Apoio</a></li>
+          <li><a href="../downloads.html">Baixar</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+        </ul>
+        <ul class="nav-site nav-site-external">
+          <li><a href="https://github.com/facebook/react">GitHub</a></li>
+          <li><a href="https://facebook.github.io/react-native/">React Native</a></li>
+        </ul>
+      </div>
+    </div>
+
+    
+
+    <section class="content wrap documentationContent">
+  <div class="nav-docs">
+  <!-- Docs Nav -->
+  
+    <div class="nav-docs-section">
+      <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">ComeÇo rÁpido</span></h3>
+      <ul>
+        
+          <li>
+            <a href="getting-started.html" class="active">Começando</a>
+            
+          </li>
+        
+          <li>
+            <a href="tutorial.html">Tutorial</a>
+            
+          </li>
+        
+          <li>
+            <a href="thinking-in-react.html">Pensando em React</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Recursos da Comunidade</span></h3>
+      <ul>
+        
+          <li>
+            <a href="conferences.html">Conferências</a>
+            
+          </li>
+        
+          <li>
+            <a href="videos.html">Videos</a>
+            
+          </li>
+        
+          <li>
+            <a href="complementary-tools.html">Ferramentas complementares</a>
+            
+          </li>
+        
+          <li>
+            <a href="examples.html">Exemplos</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <h3>Guides</h3>
+      <ul>
+        
+          <li>
+            <a href="why-react.html">PQ React?</a>
+            
+          </li>
+        
+          <li>
+            <a href="displaying-data.html">Exibindo dados</a>
+            
+              <ul>
+                
+                  <li>
+                    <a href="jsx-in-depth.html">JSX em Profundidade</a>
+                  </li>
+                
+                  <li>
+                    <a href="jsx-spread.html">JSX Atributos de Spread</a>
+                  </li>
+                
+                  <li>
+                    <a href="jsx-gotchas.html">JSX Gotchas</a>
+                  </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li>
+            <a href="interactivity-and-dynamic-uis.html">Interatividade e Uis Dinâmico</a>
+            
+          </li>
+        
+          <li>
+            <a href="multiple-components.html">Vários componentes</a>
+            
+          </li>
+        
+          <li>
+            <a href="reusable-components.html">Componentes reutilizável</a>
+            
+          </li>
+        
+          <li>
+            <a href="transferring-props.html">Transferindo Props</a>
+            
+          </li>
+        
+          <li>
+            <a href="forms.html">Formulários</a>
+            
+          </li>
+        
+          <li>
+            <a href="working-with-the-browser.html">Trabalhando com o Navegador</a>
+            
+              <ul>
+                
+                  <li>
+                    <a href="more-about-refs.html">Refs Para componentes</a>
+                  </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li>
+            <a href="tooling-integration.html">Tooling Integração</a>
+            
+          </li>
+        
+          <li>
+            <a href="addons.html">Add-Ons</a>
+            
+              <ul>
+                
+                  <li>
+                    <a href="animation.html">Animação</a>
+                  </li>
+                
+                  <li>
+                    <a href="two-way-binding-helpers.html">Two-Way Binding Helpers</a>
+                  </li>
+                
+                  <li>
+                    <a href="test-utils.html">Utilitários de Teste</a>
+                  </li>
+                
+                  <li>
+                    <a href="clone-with-props.html">Elementos Clonagem </a>
+                  </li>
+                
+                  <li>
+                    <a href="create-fragment.html">Fragmentos Chaveados</a>
+                  </li>
+                
+                  <li>
+                    <a href="update.html">Imutabilidade Helpers</a>
+                  </li>
+                
+                  <li>
+                    <a href="pure-render-mixin.html">PureRenderMixin</a>
+                  </li>
+                
+                  <li>
+                    <a href="perf.html">Ferramentas de desenpenho</a>
+                  </li>
+                
+                  <li>
+                    <a href="shallow-compare.html">Shallow Compare</a>
+                  </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li>
+            <a href="advanced-performance.html">Advanced Performance</a>
+            
+          </li>
+        
+          <li>
+            <a href="context.html">Contexto</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Referência</span></h3>
+      <ul>
+        
+          <li>
+            <a href="top-level-api.html">Top-Level API</a>
+            
+          </li>
+        
+          <li>
+            <a href="component-api.html">Component API</a>
+            
+          </li>
+        
+          <li>
+            <a href="component-specs.html">Componente especificação e ciclo de vida</a>
+            
+          </li>
+        
+          <li>
+            <a href="tags-and-attributes.html">Marcaçôes suportadas e atributos</a>
+            
+          </li>
+        
+          <li>
+            <a href="events.html">Sistema de eventos</a>
+            
+          </li>
+        
+          <li>
+            <a href="dom-differences.html">Diferenças do DOM </a>
+            
+          </li>
+        
+          <li>
+            <a href="special-non-dom-attributes.html">Especial não-DOM Atributos</a>
+            
+          </li>
+        
+          <li>
+            <a href="reconciliation.html">Reconciliação</a>
+            
+          </li>
+        
+          <li>
+            <a href="webcomponents.html">Web Components</a>
+            
+          </li>
+        
+          <li>
+            <a href="glossary.html">React (Virtual) DOM Tecnologia</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <h3>Fluxo</h3>
+      <ul>
+        
+          <li>
+            <a href="https://facebook.github.io/flux/docs/overview.html">Flux Overview</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://facebook.github.io/flux/docs/todo-list.html">Flux TodoMVC Tutorial</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+
+  <!-- Tips Nav -->
+  
+    <div class="nav-docs-section">
+      <h3>Dicas</h3>
+      <ul>
+        
+          <li>
+            <a href="../tips/introduction.html">Introdução</a>
+          </li>
+        
+          <li>
+            <a href="../tips/inline-styles.html">Inline Styles</a>
+          </li>
+        
+          <li>
+            <a href="../tips/if-else-in-JSX.html">If-Else in JSX</a>
+          </li>
+        
+          <li>
+            <a href="../tips/self-closing-tag.html">Self-Closing Tag</a>
+          </li>
+        
+          <li>
+            <a href="../tips/maximum-number-of-jsx-root-nodes.html">Número máximo de JSX Root Nodes</a>
+          </li>
+        
+          <li>
+            <a href="../tips/style-props-value-px.html">Taquigrafia para especificar  Pixel Valores em style props</a>
+          </li>
+        
+          <li>
+            <a href="../tips/children-props-type.html">Tipos de adereços crianças (props)</a>
+          </li>
+        
+          <li>
+            <a href="../tips/controlled-input-null-value.html">Valor de null para a entrada controlada</a>
+          </li>
+        
+          <li>
+            <a href="../tips/componentWillReceiveProps-not-triggered-after-mounting.html">componentWillReceiveProps Não encadeado após montagem</a>
+          </li>
+        
+          <li>
+            <a href="../tips/props-in-getInitialState-as-anti-pattern.html">Props em getInitialState é um Anti-Pattern</a>
+          </li>
+        
+          <li>
+            <a href="../tips/dom-event-listeners.html">Ouvintes DOM de eventos em componentes</a>
+          </li>
+        
+          <li>
+            <a href="../tips/initial-ajax.html">Carregar dados inicial via AJAX</a>
+          </li>
+        
+          <li>
+            <a href="../tips/false-in-jsx.html">Falso em JSX</a>
+          </li>
+        
+          <li>
+            <a href="../tips/communicate-between-components.html">Comunique se entre os componentes</a>
+          </li>
+        
+          <li>
+            <a href="../tips/expose-component-functions.html">Expor as funçôes dos componentes</a>
+          </li>
+        
+          <li>
+            <a href="../tips/children-undefined.html">this.props.children undefined</a>
+          </li>
+        
+          <li>
+            <a href="../tips/use-react-with-other-libraries.html">Use React com outras Bibliotecas</a>
+          </li>
+        
+          <li>
+            <a href="../tips/dangerously-set-inner-html.html">Perigosamente Set innerHTML</a>
+          </li>
+        
+      </ul>
+    </div>
+  
+</div>
+
+
+  <div class="inner-content">
+    <h1><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Introdução</span><a class="edit-page-link" href="https://github.com/facebook/react/tree/master/docs/docs/getting-started.md" target="_blank">Edit on GitHub</a>
+    </h1>
+    <div class="subHeader"></div>
+
+    <h2><a class="anchor" name="jsfiddle"></a>JSFiddle <a class="hash-link" href="#jsfiddle">#</a></h2>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">A maneira mais fácil de começar a cortar em React está usando os seguintes exemplos JSFiddle Olá Mundo:</span></p>
+
+<ul>
+<li><strong><a href="https://jsfiddle.net/reactjs/69z2wepo/">React JSFiddle</a></strong></li>
+<li><a href="https://jsfiddle.net/reactjs/5vjqabv3/">React JSFiddle without JSX</a></li>
+</ul>
+<h2><a class="anchor" name="using-react-from-npm"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Usando React de npm</span> <a class="hash-link" href="#using-react-from-npm">#</a></h2>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Recomendamos o uso de React com um sistema de módulos commonjs como </span><a href="http://browserify.org/">browserify</a> ou <a href="https://webpack.github.io/">webpack</a>. <span onmouseover="_tipon(this)" onmouseout="_tipoff()">Use os</span> <a href="https://www.npmjs.com/package/react"><code>react</code></a>e <a href="https://www.npmjs.com/package/react-dom"><code>react-dom</code></a> pacotes npm .</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// main.js</span>
+<span class="kd">var</span> <span class="nx">React</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;react&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">ReactDOM</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;react-dom&#39;</span><span class="p">);</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">world</span><span class="o">!&lt;</span><span class="err">/h1&gt;,</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Para instalar React DOM e construir o seu pacote com browserify:</span></p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>npm install --save react react-dom babelify babel-preset-react
+<span class="nv">$ </span>browserify -t <span class="o">[</span> babelify --presets <span class="o">[</span> react <span class="o">]</span> <span class="o">]</span> main.js -o bundle.js
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Para instalar React DOM e construir o seu pacote com Webpack:</span></p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>npm install --save react react-dom babel-preset-react
+<span class="nv">$ </span>webpack
+</code></pre></div>
+<blockquote>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Nota:</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Se você estiver usando ES2015, você vai querer usar também o</span></p>
+<p><code>babel-preset-es2015</code> package.</p>
+</blockquote>
+
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()"><strong>Nota:</strong> por padrão, React será no modo de desenvolvimento, que é mais lento, e não aconselhável para a produção.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Para usar React no modo de produção, defina a variável de ambiente</span><strong> </strong><code>NODE_ENV</code> de <code>production</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">(utilizando envify ou DefinePlugin de Webpack).</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Por exemplo:</span></p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">DefinePlugin</span><span class="p">({</span>
+  <span class="s2">&quot;process.env&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">NODE_ENV</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="s2">&quot;production&quot;</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div><h2><a class="anchor" name="quick-start-without-npm"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Início Rápido Sem npm</span><a class="hash-link" href="#quick-start-without-npm">#</a></h2>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Se   você não está pronto para usar npm no entanto, você pode baixar o   starter kit que inclui cópias pré-construídos de React e React-DOM.</span></p>
+
+<div class="buttons-unit downloads">
+  <a href="../downloads/react-0.14.6.zip" class="button">
+    Download Starter Kit 0.14.6
+  </a>
+</div>
+
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">No diretório raiz do kit inicial, criar uma</span> <code>helloworld.html</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">com o seguinte conteúdo.</span></p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;UTF-8&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Hello React!<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;build/react.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;build/react-dom.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;example&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/babel&quot;</span><span class="nt">&gt;</span>
+      <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">world</span><span class="o">!&lt;</span><span class="err">/h1&gt;,</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+      <span class="p">);</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">A sintaxe XML dentro do JavaScript é chamada JSX;</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> veja a</span> <a href="jsx-in-depth.html">JSX syntax</a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">para aprender mais sobre ele.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> A fim de traduzi-lo para baunilha JavaScript usamos</span> <code>&lt;script type=&quot;text/babel&quot;&gt;</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()"> e incluem Babel para realmente executar a transformação no navegador.</span></p>
+<h3><a class="anchor" name="separate-file"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Arquivo separada</span><a class="hash-link" href="#separate-file">#</a></h3>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Seu React código JSX pode viver em um arquivo separado.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Crie o seguinte</span><code>src/helloworld.js</code>.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">world</span><span class="o">!&lt;</span><span class="err">/h1&gt;,</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Em seguida, referenciá-los de</span><code>helloworld.html</code>:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/babel&quot;</span> <span class="na">src=</span><span class="s">&quot;src/helloworld.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Observe que alguns navegadores (Chrome, por exemplo) não poderá carregar o arquivo a menos que seja servido através de HTTP.</span></p>
+<h3><a class="anchor" name="offline-transform"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Off-line Transforme</span><a class="hash-link" href="#offline-transform">#</a></h3>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Primeiro instalar os</span> <a href="http://babeljs.io/">Babel </a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">ferramentas de linha de comando (exige</span><a href="https://www.npmjs.com/"> npm</a>):</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">npm install --global babel-cli
+npm install babel-preset-react
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Em seguida, traduzir o seu</span> <code>src/helloworld.js</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()"> arquivo de JavaScript simples:</span></p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">babel --presets react src --watch --out-dir build
+</code></pre></div>
+<blockquote>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Nota:</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Se você estiver usando ES2015, você vai querer usar também o</span></p>
+<p><code>babel-preset-es2015</code> package.</p>
+</blockquote>
+
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">O arquivo</span><code>build/helloworld.js</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">é gerado automaticamente sempre que você fizer uma mudança.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Leia a</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"><a href="http://babeljs.io/docs/usage/cli/">Documentação Babel CLI</a></span><span onmouseover="_tipon(this)" onmouseout="_tipoff()"> para um uso mais avançado.</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+<span class="hll">  <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="s1">&#39;Hello, world!&#39;</span><span class="p">),</span>
+</span>  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Atualize seu arquivo HTML como abaixo:</span></p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;UTF-8&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Hello React!<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;build/react.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;build/react-dom.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="hll">    <span class="c">&lt;!-- No need for Babel! --&gt;</span>
+</span>  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;example&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="hll">    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;build/helloworld.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span>  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div><h2><a class="anchor" name="next-steps"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Próximos Passos</span><a class="hash-link" href="#next-steps">#</a></h2>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Confira <a href="tutorial.html">o tutorial</a> e os outros exemplos do kit inicial <code>examples</code> diretório para saber mais.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Temos também um wiki onde a comunidade contribui com <a href="https://github.com/facebook/react/wiki/Complementary-Tools">fluxos de trabalho, UI-componentes, roteamento, gerenciamento de dados, etc.</a></span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Boa sorte, e bem-vindo!</span></p>
+
+
+    <div class="docs-prevnext">
+      
+      
+        <a class="docs-next" href="tutorial.html">Próximo &rarr;</a>
+      
+    </div>
+  </div>
+</section>
+
+
+    <footer class="wrap">
+      <div class="left">
+        A Facebook &amp; Instagram collaboration.<br>
+        <a href="../acknowledgements.html">Acknowledgements</a>
+      </div>
+      <div class="right">
+        &copy; 2013&ndash;2016 Facebook Inc.<br>
+        Documentation licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+      </div>
+    </footer>
+  </div>
+  <div id="fb-root"></div>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-41298772-1', 'facebook.github.io');
+    ga('send', 'pageview');
+
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "../../../connect.facebook.net/en_US/all.js#xfbml=1&appId=623268441017527";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+
+<!-- Mirrored from facebook.github.io/react/docs/getting-started.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Jan 2016 10:36:27 GMT -->
+</html>

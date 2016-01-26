@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+<!-- Mirrored from facebook.github.io/react/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Jan 2016 10:35:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>A JavaScript library for building user interfaces | React</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:title" content="A JavaScript library for building user interfaces | React">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="index-2.html">
+  <meta property="og:image" content="img/logo_og.png">
+  <meta property="og:description" content="A JavaScript library for building user interfaces">
+  <meta property="fb:app_id" content="623268441017527">
+
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="React" href="feed.xml">
+
+  <link rel="stylesheet" href="css/syntax.css">
+  <link rel="stylesheet" href="css/codemirror.css">
+  <link rel="stylesheet" href="css/react.css">
+
+  <script src="../../use.typekit.net/vqa1hcx.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
+  <!--[if lte IE 8]>
+  <script src="/react/js/html5shiv.min.js"></script>
+  <script src="/react/js/es5-shim.min.js"></script>
+  <script src="/react/js/es5-sham.min.js"></script>
+  <![endif]-->
+  <script src="js/codemirror.js"></script>
+  <script src="js/javascript.js"></script>
+  <script src="js/react.js"></script>
+  <script src="js/react-dom.js"></script>
+  <script src="js/babel-browser.min.js"></script>
+  <script src="js/live_editor.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="nav-main">
+      <div class="wrap">
+        <a class="nav-home" href="index-2.html">
+          <img class="nav-logo" src="img/logo.svg" width="36" height="36">
+          React
+        </a>
+        <ul class="nav-site nav-site-internal">
+          <li><a href="docs/getting-started.html">Documentação</a></li>
+          <li><a href="support.html">Apoio</a></li>
+          <li><a href="downloads.html">Baixar</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+
+        <ul class="nav-site nav-site-external">
+          <li><a href="https://github.com/facebook/react">GitHub</a></li>
+          <li><a href="https://facebook.github.io/react-native/">React Native</a></li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <div class="hero">
+      <div class="wrap">
+        <div class="text"><strong>React</strong></div>
+        <div class="minitext"><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Uma biblioteca JavaScript para a construÇÃo de interfaces de usuÁrio</span></div>
+
+        <div class="buttons-unit">
+          <a href="docs/getting-started.html" class="button">COMEÇAR</a>
+          <a href="downloads.html" class="button">Baixar React v0.14.6</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <section class="content wrap">
+  <p><section class="light home-section">
+  <div class="marketing-row">
+    <div class="marketing-col">
+      <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Apenas a interface do usuÁrio</span></h3>
+      <p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Muitas pessoas usam React como o V no MVC.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()">  React não faz suposições sobre o resto de sua tecnologia de   pilha, é fácil para testá-lo em um pequeno recurso em um projeto   existente.</span></p>
+    </div>
+    <div class="marketing-col">
+      <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">DOM Virtual</span></h3>
+      <p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> React abstrai o DOM de você, dando um modelo de programação mais simples e melhor desempenho.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> React também pode processar no servidor usando Node, e pode acionar aplicativos nativos usando <a href="https://facebook.github.io/react-native/">React Nativo</a></span></p>
+    </div>
+    <div class="marketing-col">
+      <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Fluxo de dados</span></h3>
+      <p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> React implementos one-way fluxo de dados reacts que reduz clichê e é   mais fácil para raciocinar sobre a ligação de dados tradicionais.</span></p>
+    </div>
+  </div>
+</section>
+<hr class="home-divider" />
+<section class="home-section">
+  <div id="examples">
+    <div class="example">
+      <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Um componente simples</span></h3>
+      <p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> React componentes implementar uma <code>render()</code> método que usa dados de entrada e retorna o que mostrar.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Este exemplo utiliza uma sintaxe XML, chamado JSX.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Os dados de entrada que é passado para o componente pode ser acessado por <code>render()</code> via <code>this.props</code>.</span></p>
+      <h3><strong>J</strong><span onmouseover="_tipon(this)" onmouseout="_tipoff()"><strong>JSX é opcional e não necessário para usar React.</strong> Experimente clicar sobre "JS Compilado" para ver o código JavaScript em bruto produzido pelo compilador JSX.</span></h3>
+      <div id="helloExample"></div>
+    </div>
+    <div class="example">
+      <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Um componente Stateful</span></h3>
+      <p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Além de levar os dados de entrada (acessado através<code>this.props</code> um componente pode manter dados de estado internas (acessados ​​via <code>this.state</code></span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Quando as alterações de dados de estado de um componente, a marcação processada será atualizado por re-invocando <code>render()</code></span></p>
+      <p>&nbsp;</p>
+      <div id="timerExample"></div>
+    </div>
+    <div class="example">
+      <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Uma aplicação</span></h3>
+      <p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Usando <code>props</code> e <code>state</code> podemos montar um pequeno aplicativo Todo.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Este exemplo usa <code>state</code> para acompanhar a atual lista de itens, bem como o texto que o usuário digitou.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Apesar de manipuladores de eventos parecem ser prestados em linha, eles   serão recolhidos e implementado usando a delegação de evento.</span></p>
+      <p>&nbsp;</p>
+      <div id="todoExample"></div>
+    </div>
+    <div class="example">
+      <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Um componente usando plugins externos</span></h3>
+      <p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> React é flexível e fornece ganchos que lhe permitem interagir com outras bibliotecas e frameworks.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Este exemplo usa <strong>marcada,</strong> uma biblioteca Markdown externo, para converter o valor do textarea em tempo real.</span></p>
+      <div id="markdownExample"></div>
+    </div>
+  </div>
+  <script src="js/marked.min.js"></script>
+  <script src="js/examples/hello.js"></script>
+  <script src="js/examples/timer.js"></script>
+  <script src="js/examples/todo.js"></script>
+  <script src="js/examples/markdown.js"></script>
+</section>
+<hr class="home-divider" />
+<section class="home-bottom-section">
+  <div class="buttons-unit">
+    <a href="docs/getting-started.html" class="button">Começar</a>
+    <a href="downloads.html" class="button">Baixar React v0.14.6</a>
+  </div>
+</section>
+</p>
+    </section>
+
+
+    <footer class="wrap">
+      <div class="left">
+        A Facebook &amp; Instagram collaboration.<br>
+        <a href="acknowledgements.html">Acknowledgements</a>
+      </div>
+      <div class="right">
+        &copy; 2013&ndash;2016 Facebook Inc.<br>
+        Documentation licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+      </div>
+    </footer>
+  </div>
+  <div id="fb-root"></div>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-41298772-1', 'facebook.github.io');
+    ga('send', 'pageview');
+
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "../../connect.facebook.net/en_US/all.js#xfbml=1&appId=623268441017527";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+
+<!-- Mirrored from facebook.github.io/react/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Jan 2016 10:35:49 GMT -->
+</html>

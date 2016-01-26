@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+<!-- Mirrored from facebook.github.io/react/docs/tutorial.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Jan 2016 10:37:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Tutorial | React</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:title" content="Tutorial | React">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="tutorial.html">
+  <meta property="og:image" content="../img/logo_og.png">
+  <meta property="og:description" content="A JavaScript library for building user interfaces">
+  <meta property="fb:app_id" content="623268441017527">
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="React" href="../feed.xml">
+
+  <link rel="stylesheet" href="../css/syntax.css">
+  <link rel="stylesheet" href="../css/codemirror.css">
+  <link rel="stylesheet" href="../css/react.css">
+
+  <script src="../../../use.typekit.net/vqa1hcx.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
+  <!--[if lte IE 8]>
+  <script src="/react/js/html5shiv.min.js"></script>
+  <script src="/react/js/es5-shim.min.js"></script>
+  <script src="/react/js/es5-sham.min.js"></script>
+  <![endif]-->
+  <script src="../js/codemirror.js"></script>
+  <script src="../js/javascript.js"></script>
+  <script src="../js/react.js"></script>
+  <script src="../js/react-dom.js"></script>
+  <script src="../js/babel-browser.min.js"></script>
+  <script src="../js/live_editor.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="nav-main">
+      <div class="wrap"> <a class="nav-home" href="../index-2.html"> <img src="img/logo.svg" alt="" width="36" height="36" class="nav-logo"> React </a>
+        <ul class="nav-site nav-site-internal">
+          <li><a href="../docs/getting-started.html">Documentação</a></li>
+          <li><a href="../support.html">Apoio</a></li>
+          <li><a href="../downloads.html">Baixar</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+        </ul>
+        <ul class="nav-site nav-site-external">
+          <li><a href="https://github.com/facebook/react">GitHub</a></li>
+          <li><a href="https://facebook.github.io/react-native/">React Native</a></li>
+        </ul>
+      </div>
+    </div>
+
+    
+
+    <section class="content wrap documentationContent">
+      <div class="nav-docs">
+        <!-- Docs Nav -->
+        <div class="nav-docs-section">
+          <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">ComeÇo rÁpido</span></h3>
+          <ul>
+            <li> <a href="getting-started.html" class="active">Começando</a> </li>
+            <li> <a href="tutorial.html">Tutorial</a> </li>
+            <li> <a href="thinking-in-react.html">Pensando em React</a> </li>
+          </ul>
+        </div>
+        <div class="nav-docs-section">
+          <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Recursos da Comunidade</span></h3>
+          <ul>
+            <li> <a href="conferences.html">Conferências</a> </li>
+            <li> <a href="videos.html">Videos</a> </li>
+            <li> <a href="complementary-tools.html">Ferramentas complementares</a> </li>
+            <li> <a href="examples.html">Exemplos</a> </li>
+          </ul>
+        </div>
+        <div class="nav-docs-section">
+          <h3>Guides</h3>
+          <ul>
+            <li> <a href="why-react.html">PQ React?</a> </li>
+            <li> <a href="displaying-data.html">Exibindo dados</a>
+              <ul>
+                <li> <a href="jsx-in-depth.html">JSX em Profundidade</a> </li>
+                <li> <a href="jsx-spread.html">JSX Atributos de Spread</a> </li>
+                <li> <a href="jsx-gotchas.html">JSX Gotchas</a> </li>
+              </ul>
+            </li>
+            <li> <a href="interactivity-and-dynamic-uis.html">Interatividade e Uis Dinâmico</a> </li>
+            <li> <a href="multiple-components.html">Vários componentes</a> </li>
+            <li> <a href="reusable-components.html">Componentes reutilizável</a> </li>
+            <li> <a href="transferring-props.html">Transferindo Props</a> </li>
+            <li> <a href="forms.html">Formulários</a> </li>
+            <li> <a href="working-with-the-browser.html">Trabalhando com o Navegador</a>
+              <ul>
+                <li> <a href="more-about-refs.html">Refs Para componentes</a> </li>
+              </ul>
+            </li>
+            <li> <a href="tooling-integration.html">Tooling Integração</a> </li>
+            <li> <a href="addons.html">Add-Ons</a>
+              <ul>
+                <li> <a href="animation.html">Animação</a> </li>
+                <li> <a href="two-way-binding-helpers.html">Two-Way Binding Helpers</a> </li>
+                <li> <a href="test-utils.html">Utilitários de Teste</a> </li>
+                <li> <a href="clone-with-props.html">Elementos Clonagem </a> </li>
+                <li> <a href="create-fragment.html">Fragmentos Chaveados</a> </li>
+                <li> <a href="update.html">Imutabilidade Helpers</a> </li>
+                <li> <a href="pure-render-mixin.html">PureRenderMixin</a> </li>
+                <li> <a href="perf.html">Ferramentas de desenpenho</a> </li>
+                <li> <a href="shallow-compare.html">Shallow Compare</a> </li>
+              </ul>
+            </li>
+            <li> <a href="advanced-performance.html">Advanced Performance</a> </li>
+            <li> <a href="context.html">Contexto</a> </li>
+          </ul>
+        </div>
+        <div class="nav-docs-section">
+          <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Referência</span></h3>
+          <ul>
+            <li> <a href="top-level-api.html">Top-Level API</a> </li>
+            <li> <a href="component-api.html">Component API</a> </li>
+            <li> <a href="component-specs.html">Componente especificação e ciclo de vida</a> </li>
+            <li> <a href="tags-and-attributes.html">Marcaçôes suportadas e atributos</a> </li>
+            <li> <a href="events.html">Sistema de eventos</a> </li>
+            <li> <a href="dom-differences.html">Diferenças do DOM </a> </li>
+            <li> <a href="special-non-dom-attributes.html">Especial não-DOM Atributos</a> </li>
+            <li> <a href="reconciliation.html">Reconciliação</a> </li>
+            <li> <a href="webcomponents.html">Web Components</a> </li>
+            <li> <a href="glossary.html">React (Virtual) DOM Tecnologia</a> </li>
+          </ul>
+        </div>
+        <div class="nav-docs-section">
+          <h3>Fluxo</h3>
+          <ul>
+            <li> <a href="https://facebook.github.io/flux/docs/overview.html">Flux Overview</a> </li>
+            <li> <a href="https://facebook.github.io/flux/docs/todo-list.html">Flux TodoMVC Tutorial</a> </li>
+          </ul>
+        </div>
+        <!-- Tips Nav -->
+        <div class="nav-docs-section">
+          <h3>Dicas</h3>
+          <ul>
+            <li> <a href="../tips/introduction.html">Introdução</a> </li>
+            <li> <a href="../tips/inline-styles.html">Inline Styles</a> </li>
+            <li> <a href="../tips/if-else-in-JSX.html">If-Else in JSX</a> </li>
+            <li> <a href="../tips/self-closing-tag.html">Self-Closing Tag</a> </li>
+            <li> <a href="../tips/maximum-number-of-jsx-root-nodes.html">Número máximo de JSX Root Nodes</a> </li>
+            <li> <a href="../tips/style-props-value-px.html">Taquigrafia para especificar  Pixel Valores em style props</a> </li>
+            <li> <a href="../tips/children-props-type.html">Tipos de adereços crianças (props)</a> </li>
+            <li> <a href="../tips/controlled-input-null-value.html">Valor de null para a entrada controlada</a> </li>
+            <li> <a href="../tips/componentWillReceiveProps-not-triggered-after-mounting.html">componentWillReceiveProps Não encadeado após montagem</a> </li>
+            <li> <a href="../tips/props-in-getInitialState-as-anti-pattern.html">Props em getInitialState é um Anti-Pattern</a> </li>
+            <li> <a href="../tips/dom-event-listeners.html">Ouvintes DOM de eventos em componentes</a> </li>
+            <li> <a href="../tips/initial-ajax.html">Carregar dados inicial via AJAX</a> </li>
+            <li> <a href="../tips/false-in-jsx.html">Falso em JSX</a> </li>
+            <li> <a href="../tips/communicate-between-components.html">Comunique se entre os componentes</a> </li>
+            <li> <a href="../tips/expose-component-functions.html">Expor as funçôes dos componentes</a> </li>
+            <li> <a href="../tips/children-undefined.html">this.props.children undefined</a> </li>
+            <li> <a href="../tips/use-react-with-other-libraries.html">Use React com outras Bibliotecas</a> </li>
+            <li> <a href="../tips/dangerously-set-inner-html.html">Perigosamente Set innerHTML</a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="inner-content">
+    <h1>
+      Tutorial
+      <a class="edit-page-link" href="https://github.com/facebook/react/tree/master/docs/docs/tutorial.md" target="_blank">Edit on GitHub</a>
+    </h1>
+    <div class="subHeader"></div>
+
+    <p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Nós   vamos ser a construção de uma caixa de simples comentários, mas   realistas que você pode cair em um blog, uma versão básica dos   comentários em tempo real oferecidos por Disqus, LiveFyre ou Facebook   comentários.</span></p>
+    <p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Nós vamos fornecer:</span></p>
+    <ul>
+      <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Uma vista de todos os comentários</span></li>
+      <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Um formulário para enviar um comentário</span></li>
+      <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Ganchos para que você forneça um backend personalizado</span></li>
+    </ul>
+    <p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Ele também terá algumas características puras:</span></p>
+
+<ul>
+  <li><span onmouseover="_tipon(this)" onmouseout="_tipoff()"><strong>Optimistic comentando:</strong> comentários aparecem na lista antes de serem salvos no servidor para que ele se sente rápido.</span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> <strong>Atualizações ao vivo:</strong> Comentários de outros usuários são pisou na vista comentário em tempo real.</span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> <strong>A formatação do Markdown:</strong> os usuários podem usar Markdown para formatar seu texto.</span></li>
+</ul>
+<h3><a class="anchor" name="want-to-skip-all-this-and-just-see-the-source"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Quer pular tudo isso e só ver a fonte?</span><a class="hash-link" href="#want-to-skip-all-this-and-just-see-the-source">#</a></h3>
+<p><a href="https://github.com/reactjs/react-tutorial">É tudo no GitHub.</a></p>
+<h3><a class="anchor" name="running-a-server"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Executando um servidor</span><a class="hash-link" href="#running-a-server">#</a></h3>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">A fim de iniciar este tutorial, vamos precisar de um servidor em execução.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Isso servirá apenas como um ponto de extremidade API que vamos usar para obter e salvar dados.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> A fim de fazer isto tão fácil quanto possível, nós criamos um simples   servidor em um número de linguagens de script que faz exatamente o que   precisa fazer.</span><span onmouseover="_tipon(this)" onmouseout="_tipoff()"><strong>Você pode <a href="https://translate.googleusercontent.com/translate_c?depth=1&hl=pt-BR&ie=UTF8&langpair=auto%7Cpt-BR&rurl=translate.google.com.br&tbb=1&u=https://github.com/reactjs/react-tutorial/&usg=ALkJrhiHt4dUUAcN1HhVBHu6z9iffmxcoA">visualizar a fonte</a> ou <a href="https://github.com/reactjs/react-tutorial/archive/master.zip">baixar um arquivo zip</a> que contém tudo o necessário para começar.</strong></span></p>
+
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Por razões de simplicidade, o servidor que será executado utiliza um</span> <code>JSON</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">arquivo como um banco de dados.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Você não iria executar isso em produção, mas que torna mais fácil para simular o que você pode fazer quando consumir uma API.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Uma vez que você iniciar o servidor, ele vai apoiar o nosso ponto final   API e que também irá servir as páginas estáticas que precisamos.</span></p>
+<h3><a class="anchor" name="getting-started"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Primeiros passos</span><a class="hash-link" href="#getting-started">#</a></h3>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Para este tutorial, vamos torná-lo tão fácil quanto possível.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Incluído no pacote do servidor discutido acima é um arquivo HTML que nós vamos trabalhar. Abra</span> <code>public/index.html</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">em seu editor favorito.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Deve ser algo parecido com isto:</span></p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- index.html --&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>React Tutorial<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react-dom.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;content&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/babel&quot;</span> <span class="na">src=</span><span class="s">&quot;scripts/example.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/babel&quot;</span><span class="nt">&gt;</span>
+      <span class="c1">// To get started with this tutorial running your own code, simply remove</span>
+      <span class="c1">// the script tag loading scripts/example.js and start writing code here.</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Para o restante deste tutorial, vamos estar escrevendo o nosso código JavaScript nesta tag script.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Não temos qualquer avançado live-recarregamento de forma que você   precisa para atualizar seu navegador para ver as atualizações depois de   salvar.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Siga o seu progresso, abrindo</span> <code>http://localhost:3000</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">no seu navegador (depois de iniciar o servidor).</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Quando você carrega esta pela primeira vez, sem quaisquer alterações, você vai ver o produto acabado do que vamos construir.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Quando você estiver pronto para começar a trabalhar, basta apagar a anterior</span> <code>&lt;script&gt;</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">tag e então você pode continuar.</span></p>
+
+<blockquote>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Nota:</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Foram incluídos jQuery aqui porque queremos simplificar o código dos nossos chamadas ajax futuros, <strong>mas</strong> não é obrigatório para Reagir a trabalhar.</span></p>
+</blockquote>
+<h3><a class="anchor" name="your-first-component"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Seu primeiro componente</span><a class="hash-link" href="#your-first-component">#</a></h3>
+<p>React <span onmouseover="_tipon(this)" onmouseout="_tipoff()">é tudo sobre, componentes modulares componíveis.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Para o nosso exemplo caixa de comentário, vamos ter a seguinte estrutura de componente:</span></p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">- CommentBox
+  - CommentList
+    - Comment
+  - CommentForm
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Vamos construir a</span> <code>CommentBox</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()"> componente, que é apenas um simples</span> <code>&lt;div&gt;</code>:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial1.js</span>
+<span class="kd">var</span> <span class="nx">CommentBox</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentBox&quot;</span><span class="o">&gt;</span>
+        <span class="nx">Hello</span><span class="p">,</span> <span class="nx">world</span><span class="o">!</span> <span class="nx">I</span> <span class="nx">am</span> <span class="nx">a</span> <span class="nx">CommentBox</span><span class="p">.</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">CommentBox</span> <span class="o">/&gt;</span><span class="p">,</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Note   que nomes de elemento HTML nativo começar com uma letra minúscula,   enquanto costume Reagir nomes de classes começam com uma letra   maiúscula.</span></p>
+<h4><a class="anchor" name="jsx-syntax"></a>JSX Sintaxe <a class="hash-link" href="#jsx-syntax">#</a></h4>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">A primeira coisa que você notará é a sintaxe XML-ish em seu JavaScript.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Temos um pré-compilador simples que traduz o açúcar sintático para esta planície JavaScript:</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial1-raw.js</span>
+<span class="kd">var</span> <span class="nx">CommentBox</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span><span class="nx">displayName</span><span class="o">:</span> <span class="s1">&#39;CommentBox&#39;</span><span class="p">,</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">className</span><span class="o">:</span> <span class="s2">&quot;commentBox&quot;</span><span class="p">},</span>
+        <span class="s2">&quot;Hello, world! I am a CommentBox.&quot;</span>
+      <span class="p">)</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">CommentBox</span><span class="p">,</span> <span class="kc">null</span><span class="p">),</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Seu uso é opcional, mas nós encontramos sintaxe JSX mais fácil de usar do que simples JavaScript.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Leia mais no</span> <a href="jsx-in-depth.html">artigo JSX Sintaxe</a>.</p>
+<h4><a class="anchor" name="whats-going-on"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">O que está acontecendo</span><a class="hash-link" href="#whats-going-on">#</a></h4>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Passamos alguns métodos em um objeto JavaScript para</span> <code>React.createClass()</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()"> para criar um novo componente React.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> O mais importante destes métodos é chamado de </span><code>render</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">que retorna uma árvore de Reagir componentes que acabará por render para HTML.</span></p>
+
+<p>Os <code>&lt;div&gt;</code> <span onmouseover="_tipon(this)" onmouseout="_tipoff()">marcas não são nós DOM reais;</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> eles são instâncias de</span> React <code>div</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">componentes.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Você pode pensar neles como marcadores ou peças de dados que reagem sabe como lidar.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> React <strong>é</strong> seguro.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Nós não estamos gerando seqüências de HTML para proteção XSS é o padrão.</span></p>
+
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Você não tem que retornar HTML básico.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Você pode retornar uma árvore de componentes que você (ou outra pessoa) construídos.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Isso é o que faz React <strong>composable:</strong> um princípio fundamental da frontends sustentáveis.</span></p>
+
+<p><code>ReactDOM.render()</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">instancia o componente de raiz, inicia o quadro, e injeta a marcação em um elemento DOM cru, fornecido como o segundo argumento.</span></p>
+
+<p>O <code>ReactDOM</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">módulo expõe métodos DOM-específicas, enquanto</span> <code>React</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">tem as ferramentas fundamentais compartilhados por reagir em diferentes plataformas (por exemplo,</span> <a href="http://facebook.github.io/react-native/">React Nativo</a>).</p>
+
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">É importante que</span> <code>ReactDOM.render</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">permanecem na parte inferior do script para este tutorial.</span><code>ReactDOM.render</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">só deve ser chamado depois que os componentes em materiais compósitos foram definidas.</span></p>
+<h2><a class="anchor" name="composing-components"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Componentes que compõem</span><a class="hash-link" href="#composing-components">#</a></h2>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Vamos construir esqueletos para</span> <code>CommentList</code> e <code>CommentForm</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">que irá, mais uma vez, ser simples</span> <code>&lt;div&gt;</code> s.<span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Adicione estes dois componentes para o seu arquivo, mantendo o existente</span> <code>CommentBox</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">declaração e</span> <code>ReactDOM.render</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">chamada:</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial2.js</span>
+<span class="kd">var</span> <span class="nx">CommentList</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentList&quot;</span><span class="o">&gt;</span>
+        <span class="nx">Hello</span><span class="p">,</span> <span class="nx">world</span><span class="o">!</span> <span class="nx">I</span> <span class="nx">am</span> <span class="nx">a</span> <span class="nx">CommentList</span><span class="p">.</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="kd">var</span> <span class="nx">CommentForm</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentForm&quot;</span><span class="o">&gt;</span>
+        <span class="nx">Hello</span><span class="p">,</span> <span class="nx">world</span><span class="o">!</span> <span class="nx">I</span> <span class="nx">am</span> <span class="nx">a</span> <span class="nx">CommentForm</span><span class="p">.</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Em seguida, atualize o</span> <code>CommentBox</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">componente para usar esses novos componentes:</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial3.js</span>
+<span class="kd">var</span> <span class="nx">CommentBox</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentBox&quot;</span><span class="o">&gt;</span>
+<span class="hll">        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Comments</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+</span><span class="hll">        <span class="o">&lt;</span><span class="nx">CommentList</span> <span class="o">/&gt;</span>
+</span><span class="hll">        <span class="o">&lt;</span><span class="nx">CommentForm</span> <span class="o">/&gt;</span>
+</span>      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Observe como nós estamos misturando tags HTML e componentes que construímos.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Componentes HTML são regulares React componentes, assim como os que você definir, com uma diferença.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> O compilador JSX irá reescrever automaticamente tags HTML para </span><code>React.createElement(tagName)</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">expressões e deixar tudo o resto sozinho.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Isso é para evitar a poluição do namespace global.</span></p>
+<h3><a class="anchor" name="using-props"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Usando adereços</span> <a class="hash-link" href="#using-props">#</a></h3>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Vamos criar o</span> <code>Comment</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">do componente, que dependerá de dados passados ​​de seu pai.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Dados passados ​​a partir de um componente pai está disponível como uma "propriedade" sobre o componente filho.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Estes 'propriedades' são acessados ​​através</span> <code>this.props</code>. <span onmouseover="_tipon(this)" onmouseout="_tipoff()">Usando adereços, que será capaz de ler os dados passados ​​para o</span> <code>Comment</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">do</span> <code>CommentList</code>, <span onmouseover="_tipon(this)" onmouseout="_tipoff()">e tornar algumas marcações:</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial4.js</span>
+<span class="kd">var</span> <span class="nx">Comment</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;comment&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h2</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentAuthor&quot;</span><span class="o">&gt;</span>
+          <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">author</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="err">/h2&gt;</span>
+        <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">children</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Cercando   uma expressão JavaScript em chaves dentro JSX (tanto como um atributo   ou criança), você pode soltar texto ou React componentes na árvore.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Nós Access chamado atributos passados ​​para o componente como chaves no</span> <code>this.props</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">e quaisquer elementos aninhados como</span> <code>this.props.children</code>.</p>
+<h3><a class="anchor" name="component-properties"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Propriedades do Componente</span><a class="hash-link" href="#component-properties">#</a></h3>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Agora que já definiu o</span> <code>Comment</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()"> do componente, vamos querer passá-lo o nome do autor e comentar o texto.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Isso nos permite reutilizar o mesmo código para cada comentário exclusivo.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Agora vamos acrescentar alguns comentários dentro de nossa</span> <code>CommentList</code>:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial5.js</span>
+<span class="kd">var</span> <span class="nx">CommentList</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentList&quot;</span><span class="o">&gt;</span>
+<span class="hll">        <span class="o">&lt;</span><span class="nx">Comment</span> <span class="nx">author</span><span class="o">=</span><span class="s2">&quot;Pete Hunt&quot;</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">one</span> <span class="nx">comment</span><span class="o">&lt;</span><span class="err">/Comment&gt;</span>
+</span><span class="hll">        <span class="o">&lt;</span><span class="nx">Comment</span> <span class="nx">author</span><span class="o">=</span><span class="s2">&quot;Jordan Walke&quot;</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="o">*</span><span class="nx">another</span><span class="o">*</span> <span class="nx">comment</span><span class="o">&lt;</span><span class="err">/Comment&gt;</span>
+</span>      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Note que nós passamos alguns dados do pai</span> <code>CommentList</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">componente para a criança</span> <code>Comment</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">componentes.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Por exemplo, nós passamos <em>Pete Hunt (através</em> de um atributo) <em>e</em> este é um <em>comentário</em> (através de um nó filho XML-like) para o primeiro</span> <code>Comment</code>. <span onmouseover="_tipon(this)" onmouseout="_tipoff()">Como observado acima, o</span> <code>Comment</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()"> componente irá acessar essas "propriedades" através</span><code>this.props.author</code>, e <code>this.props.children</code>.</p>
+<h3><a class="anchor" name="adding-markdown"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Adicionando Markdown</span><a class="hash-link" href="#adding-markdown">#</a></h3>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Markdown é uma maneira simples para formatar seu texto em linha.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Por exemplo, em torno de texto com asteriscos irá torná-lo enfatizou.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Neste tutorial vamos usar uma biblioteca de terceiros <strong>marcada</strong> que leva texto Markdown e converte para HTML puro.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Nós já incluída esta biblioteca com a marcação original para a página, por isso, pode simplesmente começar a usá-lo.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Vamos converter o texto de comentário para Markdown e sua saída será:</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial6.js</span>
+<span class="kd">var</span> <span class="nx">Comment</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;comment&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h2</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentAuthor&quot;</span><span class="o">&gt;</span>
+          <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">author</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="err">/h2&gt;</span>
+<span class="hll">        <span class="p">{</span><span class="nx">marked</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nx">toString</span><span class="p">())}</span>
+</span>      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Tudo o que estamos fazendo aqui é chamar a biblioteca marcada.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Precisamos converter </span><code>this.props.children</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">de React texto envolto a uma corda em bruto que marcou vai entender assim que nós explicitamente chamar</span><code>toString()</code>.</p>
+
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Mas há um problema!</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Nossos comentários prestados parecido com este no navegador:</span>&quot;<code>&lt;p&gt;</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Esta é a</span> <code>&lt;em&gt;</code> outro <code>&lt;/em&gt;</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">comentário</span> <code>&lt;/p&gt;</code>&quot;. <span onmouseover="_tipon(this)" onmouseout="_tipoff()">Queremos que essas tags para realmente tornar como HTML.</span></p>
+
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Isso é React protegendo-o de um</span><a href="https://en.wikipedia.org/wiki/Cross-site_scripting"> XSS attack</a>. <span onmouseover="_tipon(this)" onmouseout="_tipoff()">Há uma maneira de contornar isso, mas o Framework avisa para não usá-lo:</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial7.js</span>
+<span class="kd">var</span> <span class="nx">Comment</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+<span class="hll">  <span class="nx">rawMarkup</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class="hll">    <span class="kd">var</span> <span class="nx">rawMarkup</span> <span class="o">=</span> <span class="nx">marked</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nx">toString</span><span class="p">(),</span> <span class="p">{</span><span class="nx">sanitize</span><span class="o">:</span> <span class="kc">true</span><span class="p">});</span>
+</span><span class="hll">    <span class="k">return</span> <span class="p">{</span> <span class="nx">__html</span><span class="o">:</span> <span class="nx">rawMarkup</span> <span class="p">};</span>
+</span><span class="hll">  <span class="p">},</span>
+</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;comment&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h2</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentAuthor&quot;</span><span class="o">&gt;</span>
+          <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">author</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="err">/h2&gt;</span>
+<span class="hll">        <span class="o">&lt;</span><span class="nx">span</span> <span class="nx">dangerouslySetInnerHTML</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">rawMarkup</span><span class="p">()}</span> <span class="o">/&gt;</span>
+</span>      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Esta   é uma API especial que intencionalmente torna difícil para inserir HTML   puro, mas para marcados vamos aproveitar este backdoor.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> <strong>Lembre-se:</strong> ao utilizar este recurso, você está confiando em marcado para ser seguro.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Neste caso, nós passamos </span><code>sanitize: true</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">que indica marcado para escapar qualquer marcação HTML na fonte em vez de passá-lo através inalterada.</span></p>
+<h3><a class="anchor" name="hook-up-the-data-model"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Ligue o modelo de dados</span><a class="hash-link" href="#hook-up-the-data-model">#</a></h3>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Até agora temos vindo a inserir os comentários diretamente no código-fonte.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Em vez disso, vamos tornar uma bolha de dados JSON para a lista de comentários.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Eventualmente, isso virá a partir do servidor, mas por agora, escrevê-lo em sua fonte:</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial8.js</span>
+<span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">author</span><span class="o">:</span> <span class="s2">&quot;Pete Hunt&quot;</span><span class="p">,</span> <span class="nx">text</span><span class="o">:</span> <span class="s2">&quot;This is one comment&quot;</span><span class="p">},</span>
+  <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">author</span><span class="o">:</span> <span class="s2">&quot;Jordan Walke&quot;</span><span class="p">,</span> <span class="nx">text</span><span class="o">:</span> <span class="s2">&quot;This is *another* comment&quot;</span><span class="p">}</span>
+<span class="p">];</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Precisamos levar esses dados em</span> <code>CommentList</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">de uma forma modular.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Modificar</span><code>CommentBox</code> eo <code>ReactDOM.render()</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">chamar para passar esses dados para o</span> <code>CommentList</code> via props:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial9.js</span>
+<span class="kd">var</span> <span class="nx">CommentBox</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentBox&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Comments</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+<span class="hll">        <span class="o">&lt;</span><span class="nx">CommentList</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">}</span> <span class="o">/&gt;</span>
+</span>        <span class="o">&lt;</span><span class="nx">CommentForm</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+<span class="hll">  <span class="o">&lt;</span><span class="nx">CommentBox</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">data</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">,</span>
+</span>  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Agora que os dados estão disponíveis no</span> <code>CommentList</code>,<span onmouseover="_tipon(this)" onmouseout="_tipoff()">vamos processar os comentários dinamicamente:</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial10.js</span>
+<span class="kd">var</span> <span class="nx">CommentList</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="hll">    <span class="kd">var</span> <span class="nx">commentNodes</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">comment</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">      <span class="k">return</span> <span class="p">(</span>
+</span><span class="hll">        <span class="o">&lt;</span><span class="nx">Comment</span> <span class="nx">author</span><span class="o">=</span><span class="p">{</span><span class="nx">comment</span><span class="p">.</span><span class="nx">author</span><span class="p">}</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">comment</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="o">&gt;</span>
+</span><span class="hll">          <span class="p">{</span><span class="nx">comment</span><span class="p">.</span><span class="nx">text</span><span class="p">}</span>
+</span><span class="hll">        <span class="o">&lt;</span><span class="err">/Comment&gt;</span>
+</span><span class="hll">      <span class="p">);</span>
+</span><span class="hll">    <span class="p">});</span>
+</span>    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentList&quot;</span><span class="o">&gt;</span>
+<span class="hll">        <span class="p">{</span><span class="nx">commentNodes</span><span class="p">}</span>
+</span>      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">É isso aí!</span></p>
+<h3><a class="anchor" name="fetching-from-the-server"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Buscando a partir do servidor</span><a class="hash-link" href="#fetching-from-the-server">#</a></h3>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Vamos substituir os dados codificados com alguns dados dinâmicos do servidor.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Vamos remover o suporte de dados e substituí-la por uma URL para buscar:</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial11.js</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+<span class="hll">  <span class="o">&lt;</span><span class="nx">CommentBox</span> <span class="nx">url</span><span class="o">=</span><span class="s2">&quot;/api/comments&quot;</span> <span class="o">/&gt;</span><span class="p">,</span>
+</span>  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Este componente é diferente dos componentes anteriores, porque terá que voltar a tornar-se.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> O componente não terá quaisquer dados até que a solicitação do servidor   de volta, altura em que o componente pode ter de prestar alguns novos   comentários.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Nota: o código não estará trabalhando nesta etapa.</span></p>
+<h3><a class="anchor" name="reactive-state"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Estado reativo</span><a class="hash-link" href="#reactive-state">#</a></h3>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">. Até o momento, com base em seus adereços, cada componente prestou-se uma vez </span><code>props</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">são imutáveis: eles são passados ​​de pai e são "propriedade" pelo pai.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Para implementar interacções, introduzimos <strong>estado mutável</strong> ao componente.</span><code>this.state</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">é privado para o componente e pode ser alterado pelo telefone</span> <code>this.setState()</code>. <span onmouseover="_tipon(this)" onmouseout="_tipoff()">Quando as atualizações de estado, o componente de re-torna-se.</span></p>
+
+<p><code>render()</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">métodos são escritos de forma declarativa como funções de</span> <code>this.props</code> e <code>this.state</code>. o framework <span onmouseover="_tipon(this)" onmouseout="_tipoff()">garante a interface do usuário é sempre coerente com as entradas.</span></p>
+
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Quando o servidor obtém dados, estaremos mudando o comentário de dados que temos.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Vamos adicionar uma matriz de dados de comentário ao</span> <code>CommentBox</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()"> componente como seu estado:</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial12.js</span>
+<span class="kd">var</span> <span class="nx">CommentBox</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+<span class="hll">  <span class="nx">getInitialState</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class="hll">    <span class="k">return</span> <span class="p">{</span><span class="nx">data</span><span class="o">:</span> <span class="p">[]};</span>
+</span><span class="hll">  <span class="p">},</span>
+</span>  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentBox&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Comments</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+<span class="hll">        <span class="o">&lt;</span><span class="nx">CommentList</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">data</span><span class="p">}</span> <span class="o">/&gt;</span>
+</span>        <span class="o">&lt;</span><span class="nx">CommentForm</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><code>getInitialState()</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">executa somente uma vez durante o ciclo de vida do componente e define-se o estado inicial do componente.</span></p>
+<h4><a class="anchor" name="updating-state"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Atualizando estaduais</span><a class="hash-link" href="#updating-state">#</a></h4>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Quando   o componente é criado pela primeira vez, queremos obter algum JSON do   servidor e atualizar o estado para refletir os dados mais recentes.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Nós estamos indo para usar jQuery para fazer uma solicitação assíncrona   para o servidor que começou mais cedo para ir buscar os dados que   precisamos.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Os dados já estão incluídos no servidor que você começou (com base no </span><code>comments.json</code> arquivo), <span onmouseover="_tipon(this)" onmouseout="_tipoff()">então uma vez que é improvável,</span> <code>this.state.data</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">será algo parecido com isto:</span></p>
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span>
+  <span class="p">{</span><span class="nt">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;Pete Hunt&quot;</span><span class="p">,</span> <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;This is one comment&quot;</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;Jordan Walke&quot;</span><span class="p">,</span> <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;This is *another* comment&quot;</span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial13.js</span>
+<span class="kd">var</span> <span class="nx">CommentBox</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">getInitialState</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span><span class="nx">data</span><span class="o">:</span> <span class="p">[]};</span>
+  <span class="p">},</span>
+<span class="hll">  <span class="nx">componentDidMount</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class="hll">    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+</span><span class="hll">      <span class="nx">url</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span>
+</span><span class="hll">      <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
+</span><span class="hll">      <span class="nx">cache</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span><span class="hll">      <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">data</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span>
+</span><span class="hll">      <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+</span><span class="hll">      <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">xhr</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">        <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">err</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span><span class="hll">      <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+</span><span class="hll">    <span class="p">});</span>
+</span><span class="hll">  <span class="p">},</span>
+</span>  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentBox&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Comments</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+        <span class="o">&lt;</span><span class="nx">CommentList</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">data</span><span class="p">}</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">CommentForm</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Aqui, <code>componentDidMount</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()"> é um método chamado automaticamente por reagir após um componente é processado para a primeira vez.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> A chave para atualizações dinâmicas é a chamada para</span> <code>this.setState()</code>. <span onmouseover="_tipon(this)" onmouseout="_tipoff()">Nós   substituir a antiga matriz de comentários com o novo a partir do   servidor ea interface do usuário se atualiza automaticamente.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Devido a isso reatividade, é apenas uma pequena alteração para adicionar atualizações ao vivo.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Usaremos polling simples aqui, mas você poderia facilmente usar WebSockets ou outras tecnologias.</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial14.js</span>
+<span class="kd">var</span> <span class="nx">CommentBox</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+<span class="hll">  <span class="nx">loadCommentsFromServer</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span>    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+      <span class="nx">url</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span>
+      <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
+      <span class="nx">cache</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">data</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span>
+      <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+      <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">xhr</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">err</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+      <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+    <span class="p">});</span>
+<span class="hll">  <span class="p">},</span>
+</span>  <span class="nx">getInitialState</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span><span class="nx">data</span><span class="o">:</span> <span class="p">[]};</span>
+  <span class="p">},</span>
+  <span class="nx">componentDidMount</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="hll">    <span class="k">this</span><span class="p">.</span><span class="nx">loadCommentsFromServer</span><span class="p">();</span>
+</span><span class="hll">    <span class="nx">setInterval</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">loadCommentsFromServer</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">pollInterval</span><span class="p">);</span>
+</span>  <span class="p">},</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentBox&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Comments</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+        <span class="o">&lt;</span><span class="nx">CommentList</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">data</span><span class="p">}</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">CommentForm</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+<span class="hll">  <span class="o">&lt;</span><span class="nx">CommentBox</span> <span class="nx">url</span><span class="o">=</span><span class="s2">&quot;/api/comments&quot;</span> <span class="nx">pollInterval</span><span class="o">=</span><span class="p">{</span><span class="mi">2000</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">,</span>
+</span>  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Tudo   o que fizemos aqui é mover a chamada de AJAX para um método separado e   chamá-lo quando o componente é carregado pela primeira vez e cada 2   segundos depois disso.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Tente executar este no seu browser e mudando o</span> <code>comments.json</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">arquivo (no mesmo diretório que o seu servidor);</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> dentro de 2 segundos, as mudanças vão mostrar!</span></p>
+<h3><a class="anchor" name="adding-new-comments"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Adicionando novos comentários</span><a class="hash-link" href="#adding-new-comments">#</a></h3>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Agora é hora de criar o formulário.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Nossa</span> <code>CommentForm</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">componente   deve perguntar ao usuário de seu nome e comentário de texto e enviar   uma solicitação para o servidor para salvar o comentário.</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial15.js</span>
+<span class="kd">var</span> <span class="nx">CommentForm</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+<span class="hll">      <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentForm&quot;</span><span class="o">&gt;</span>
+</span><span class="hll">        <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Your name&quot;</span> <span class="o">/&gt;</span>
+</span><span class="hll">        <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Say something...&quot;</span> <span class="o">/&gt;</span>
+</span><span class="hll">        <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span> <span class="nx">value</span><span class="o">=</span><span class="s2">&quot;Post&quot;</span> <span class="o">/&gt;</span>
+</span><span class="hll">      <span class="o">&lt;</span><span class="err">/form&gt;</span>
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div><h4><a class="anchor" name="controlled-components"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Controlado componentes</span><a class="hash-link" href="#controlled-components">#</a></h4>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Com o DOM tradicional,</span> <code>input</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">elementos são processados ​​eo navegador gerencia o estado (o seu valor prestados).</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Como resultado, o estado do DOM efectivo será diferente do que o do componente.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Este não é o ideal como o estado do modo de exibição será diferente do que o do componente.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Em Reagir, componentes deve sempre representar o estado da visão e não apenas no momento da inicialização.</span></p>
+
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Por isso, vamos estar usando</span> <code>this.state</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">para salvar a entrada do usuário como ele é inserido.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Nós definimos uma inicial</span> <code>state</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">com duas propriedades</span> <code>author</code> e <code>text</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()"> e configurá-los para ser cadeias vazias.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Em nossos</span> <code>&lt;input&gt;</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">elementos, definimos o</span> <code>value</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()"> prop para refletir o</span> <code>state</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">do componente e anexar</span> <code>onChange</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()"> manipuladores para eles.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Estes </span><code>&lt;input&gt;</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">elementos com um</span> <code>value</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">conjunto são chamados de componentes controlados.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Leia mais sobre os componentes controlados sobre o</span> <a href="forms.html#controlled-components">Forms article</a>.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial16.js</span>
+<span class="kd">var</span> <span class="nx">CommentForm</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+<span class="hll">  <span class="nx">getInitialState</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class="hll">    <span class="k">return</span> <span class="p">{</span><span class="nx">author</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">};</span>
+</span><span class="hll">  <span class="p">},</span>
+</span><span class="hll">  <span class="nx">handleAuthorChange</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">author</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">});</span>
+</span><span class="hll">  <span class="p">},</span>
+</span><span class="hll">  <span class="nx">handleTextChange</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">text</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">});</span>
+</span><span class="hll">  <span class="p">},</span>
+</span>  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentForm&quot;</span><span class="o">&gt;</span>
+<span class="hll">        <span class="o">&lt;</span><span class="nx">input</span>
+</span><span class="hll">          <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+</span><span class="hll">          <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Your name&quot;</span>
+</span><span class="hll">          <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">author</span><span class="p">}</span>
+</span><span class="hll">          <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleAuthorChange</span><span class="p">}</span>
+</span><span class="hll">        <span class="o">/&gt;</span>
+</span><span class="hll">        <span class="o">&lt;</span><span class="nx">input</span>
+</span><span class="hll">          <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+</span><span class="hll">          <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Say something...&quot;</span>
+</span><span class="hll">          <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">text</span><span class="p">}</span>
+</span><span class="hll">          <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleTextChange</span><span class="p">}</span>
+</span><span class="hll">        <span class="o">/&gt;</span>
+</span>        <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span> <span class="nx">value</span><span class="o">=</span><span class="s2">&quot;Post&quot;</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="err">/form&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div><h4><a class="anchor" name="events"></a>Events <a class="hash-link" href="#events">#</a></h4>
+<p>React<span onmouseover="_tipon(this)" onmouseout="_tipoff()"> atribui manipuladores de eventos para componentes usando uma convenção de nomenclatura camelCase.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Eu prendo</span> <code>onChange</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">manipuladores para os dois</span> <code>&lt;input&gt;</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">elementos.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Agora, como o usuário insere texto para os</span> <code>&lt;input&gt;</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">campos, os ligados </span><code>onChange</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">retornos de chamada são disparados eo</span> <code>state</code> <span onmouseover="_tipon(this)" onmouseout="_tipoff()">do componente é modificado.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Posteriormente, o valor prestados da</span> <code>input</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">elemento será atualizado para refletir o componente atual</span> <code>state</code>.</p>
+<h4><a class="anchor" name="submitting-the-form"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">O envio do formulário</span><a class="hash-link" href="#submitting-the-form">#</a></h4>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Vamos fazer a forma interativa.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Quando o usuário envia o formulário, devemos limpá-la, envie uma   solicitação para o servidor, e atualizar a lista de comentários.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Para começar, vamos ouvir para submeter o formulário evento e limpá-la.</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial17.js</span>
+<span class="kd">var</span> <span class="nx">CommentForm</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">getInitialState</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span><span class="nx">author</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">};</span>
+  <span class="p">},</span>
+  <span class="nx">handleAuthorChange</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">author</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">});</span>
+  <span class="p">},</span>
+  <span class="nx">handleTextChange</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">text</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">});</span>
+  <span class="p">},</span>
+<span class="hll">  <span class="nx">handleSubmit</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class="hll">    <span class="kd">var</span> <span class="nx">author</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">author</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+</span><span class="hll">    <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">text</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+</span><span class="hll">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">text</span> <span class="o">||</span> <span class="o">!</span><span class="nx">author</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">      <span class="k">return</span><span class="p">;</span>
+</span><span class="hll">    <span class="p">}</span>
+</span><span class="hll">    <span class="c1">// TODO: send request to the server</span>
+</span><span class="hll">    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">author</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">});</span>
+</span><span class="hll">  <span class="p">},</span>
+</span>  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+<span class="hll">      <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentForm&quot;</span> <span class="nx">onSubmit</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleSubmit</span><span class="p">}</span><span class="o">&gt;</span>
+</span>        <span class="o">&lt;</span><span class="nx">input</span>
+          <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+          <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Your name&quot;</span>
+          <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">author</span><span class="p">}</span>
+          <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleAuthorChange</span><span class="p">}</span>
+        <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">input</span>
+          <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+          <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Say something...&quot;</span>
+          <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">text</span><span class="p">}</span>
+          <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleTextChange</span><span class="p">}</span>
+        <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span> <span class="nx">value</span><span class="o">=</span><span class="s2">&quot;Post&quot;</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="err">/form&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Eu prendo um</span> <code>onSubmit</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()"> manipulador para a forma que apura os campos do formulário quando o formulário é enviado com a entrada válida.</span></p>
+
+<p>Chamar <code>preventDefault()</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">no evento para impedir a ação padrão do navegador de enviar o formulário.</span></p>
+<h4><a class="anchor" name="callbacks-as-props"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Callbacks como adereços</span> <a class="hash-link" href="#callbacks-as-props">#</a></h4>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Quando um usuário envia um comentário, vamos precisar atualizar a lista de comentários para incluir o novo.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Faz sentido fazer tudo isso lógica em</span> <code>CommentBox</code> desde <code>CommentBox</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">possui o estado que representa a lista de comentários.</span></p>
+
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Precisamos passar os dados do componente filho de volta para seu pai.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Fazemos isso em de nossos pais</span> <code>render</code> <span onmouseover="_tipon(this)" onmouseout="_tipoff()">método por meio de um novo retorno de chamada</span> (<code>handleCommentSubmit</code>) <span onmouseover="_tipon(this)" onmouseout="_tipoff()">na criança, vinculando-o da criança</span> <code>onCommentSubmit</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()"> evento.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Sempre que o evento é disparado, o callback será invocado:</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial18.js</span>
+<span class="kd">var</span> <span class="nx">CommentBox</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">loadCommentsFromServer</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+      <span class="nx">url</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span>
+      <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
+      <span class="nx">cache</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">data</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span>
+      <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+      <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">xhr</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">err</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+      <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+    <span class="p">});</span>
+  <span class="p">},</span>
+<span class="hll">  <span class="nx">handleCommentSubmit</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">comment</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">    <span class="c1">// TODO: submit to the server and refresh the list</span>
+</span><span class="hll">  <span class="p">},</span>
+</span>  <span class="nx">getInitialState</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span><span class="nx">data</span><span class="o">:</span> <span class="p">[]};</span>
+  <span class="p">},</span>
+  <span class="nx">componentDidMount</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">loadCommentsFromServer</span><span class="p">();</span>
+    <span class="nx">setInterval</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">loadCommentsFromServer</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">pollInterval</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentBox&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Comments</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+        <span class="o">&lt;</span><span class="nx">CommentList</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">data</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="hll">        <span class="o">&lt;</span><span class="nx">CommentForm</span> <span class="nx">onCommentSubmit</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleCommentSubmit</span><span class="p">}</span> <span class="o">/&gt;</span>
+</span>      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Vamos chamar o retorno de chamada do</span> <code>CommentForm</code><span onmouseover="_tipon(this)" onmouseout="_tipoff()">quando o usuário envia o formulário:</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial19.js</span>
+<span class="kd">var</span> <span class="nx">CommentForm</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">getInitialState</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span><span class="nx">author</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">};</span>
+  <span class="p">},</span>
+  <span class="nx">handleAuthorChange</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">author</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">});</span>
+  <span class="p">},</span>
+  <span class="nx">handleTextChange</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">text</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">});</span>
+  <span class="p">},</span>
+  <span class="nx">handleSubmit</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">author</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">author</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">text</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">text</span> <span class="o">||</span> <span class="o">!</span><span class="nx">author</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="hll">    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">onCommentSubmit</span><span class="p">({</span><span class="nx">author</span><span class="o">:</span> <span class="nx">author</span><span class="p">,</span> <span class="nx">text</span><span class="o">:</span> <span class="nx">text</span><span class="p">});</span>
+</span>    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">author</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">});</span>
+  <span class="p">},</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentForm&quot;</span> <span class="nx">onSubmit</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleSubmit</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">input</span>
+          <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+          <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Your name&quot;</span>
+          <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">author</span><span class="p">}</span>
+          <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleAuthorChange</span><span class="p">}</span>
+        <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">input</span>
+          <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+          <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Say something...&quot;</span>
+          <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">text</span><span class="p">}</span>
+          <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleTextChange</span><span class="p">}</span>
+        <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span> <span class="nx">value</span><span class="o">=</span><span class="s2">&quot;Post&quot;</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="err">/form&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Agora que os retornos estão no lugar, tudo o que temos a fazer é enviar para o servidor e atualizar a lista:</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial20.js</span>
+<span class="kd">var</span> <span class="nx">CommentBox</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">loadCommentsFromServer</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+      <span class="nx">url</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span>
+      <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
+      <span class="nx">cache</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">data</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span>
+      <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+      <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">xhr</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">err</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+      <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+    <span class="p">});</span>
+  <span class="p">},</span>
+  <span class="nx">handleCommentSubmit</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">comment</span><span class="p">)</span> <span class="p">{</span>
+<span class="hll">    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+</span><span class="hll">      <span class="nx">url</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span>
+</span><span class="hll">      <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
+</span><span class="hll">      <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+</span><span class="hll">      <span class="nx">data</span><span class="o">:</span> <span class="nx">comment</span><span class="p">,</span>
+</span><span class="hll">      <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">data</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span>
+</span><span class="hll">      <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+</span><span class="hll">      <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">xhr</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">        <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">err</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span><span class="hll">      <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+</span><span class="hll">    <span class="p">});</span>
+</span>  <span class="p">},</span>
+  <span class="nx">getInitialState</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span><span class="nx">data</span><span class="o">:</span> <span class="p">[]};</span>
+  <span class="p">},</span>
+  <span class="nx">componentDidMount</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">loadCommentsFromServer</span><span class="p">();</span>
+    <span class="nx">setInterval</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">loadCommentsFromServer</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">pollInterval</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentBox&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Comments</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+        <span class="o">&lt;</span><span class="nx">CommentList</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">data</span><span class="p">}</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">CommentForm</span> <span class="nx">onCommentSubmit</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleCommentSubmit</span><span class="p">}</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div><h3><a class="anchor" name="optimization-optimistic-updates"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Optimization: atualizações otimistas</span><a class="hash-link" href="#optimization-optimistic-updates">#</a></h3>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Nossa   aplicação agora é completo de recursos, mas ele se sente lento ter que   aguardar o pedido para completar antes do comentário aparecer na lista.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Podemos otimista adicionar este comentário à lista para fazer o app se sentir mais rápido.</span></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// tutorial21.js</span>
+<span class="kd">var</span> <span class="nx">CommentBox</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">loadCommentsFromServer</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+      <span class="nx">url</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span>
+      <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
+      <span class="nx">cache</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">data</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span>
+      <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+      <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">xhr</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">err</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+      <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+    <span class="p">});</span>
+  <span class="p">},</span>
+  <span class="nx">handleCommentSubmit</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">comment</span><span class="p">)</span> <span class="p">{</span>
+<span class="hll">    <span class="kd">var</span> <span class="nx">comments</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+</span><span class="hll">    <span class="c1">// Optimistically set an id on the new comment. It will be replaced by an</span>
+</span><span class="hll">    <span class="c1">// id generated by the server. In a production application you would likely</span>
+</span><span class="hll">    <span class="c1">// not use Date.now() for this and would have a more robust system in place.</span>
+</span><span class="hll">    <span class="nx">comment</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+</span><span class="hll">    <span class="kd">var</span> <span class="nx">newComments</span> <span class="o">=</span> <span class="nx">comments</span><span class="p">.</span><span class="nx">concat</span><span class="p">([</span><span class="nx">comment</span><span class="p">]);</span>
+</span><span class="hll">    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">data</span><span class="o">:</span> <span class="nx">newComments</span><span class="p">});</span>
+</span>    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+      <span class="nx">url</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span>
+      <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+      <span class="nx">data</span><span class="o">:</span> <span class="nx">comment</span><span class="p">,</span>
+      <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">data</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span>
+      <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+      <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">xhr</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+<span class="hll">        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">data</span><span class="o">:</span> <span class="nx">comments</span><span class="p">});</span>
+</span>        <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">err</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+      <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+    <span class="p">});</span>
+  <span class="p">},</span>
+  <span class="nx">getInitialState</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span><span class="nx">data</span><span class="o">:</span> <span class="p">[]};</span>
+  <span class="p">},</span>
+  <span class="nx">componentDidMount</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">loadCommentsFromServer</span><span class="p">();</span>
+    <span class="nx">setInterval</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">loadCommentsFromServer</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">pollInterval</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;commentBox&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Comments</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+        <span class="o">&lt;</span><span class="nx">CommentList</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">data</span><span class="p">}</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">CommentForm</span> <span class="nx">onCommentSubmit</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleCommentSubmit</span><span class="p">}</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div><h3><a class="anchor" name="congrats"></a><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Parabéns!</span><a class="hash-link" href="#congrats">#</a></h3>
+<p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Você acabou de construir uma caixa de comentário em algumas etapas simples.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Saiba mais sobre</span> <a href="why-react.html">Por que usar React</a>, <span onmouseover="_tipon(this)" onmouseout="_tipoff()">ou mergulhar na</span>  <a href="top-level-api.html"> referência API </a><span onmouseover="_tipon(this)" onmouseout="_tipoff()"> começar a cortar!</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Boa sorte!</span></p>
+
+
+    <div class="docs-prevnext">
+      
+        <a class="docs-prev" href="getting-started.html">&larr; Prev</a>
+      
+      
+        <a class="docs-next" href="thinking-in-react.html">Next &rarr;</a>
+      
+    </div>
+  </div>
+</section>
+
+
+    <footer class="wrap">
+      <div class="left">
+        A Facebook &amp; Instagram collaboration.<br>
+        <a href="../acknowledgements.html">Acknowledgements</a>
+      </div>
+      <div class="right">
+        &copy; 2013&ndash;2016 Facebook Inc.<br>
+        Documentation licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+      </div>
+    </footer>
+  </div>
+  <div id="fb-root"></div>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-41298772-1', 'facebook.github.io');
+    ga('send', 'pageview');
+
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "../../../connect.facebook.net/en_US/all.js#xfbml=1&appId=623268441017527";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+
+<!-- Mirrored from facebook.github.io/react/docs/tutorial.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Jan 2016 10:37:34 GMT -->
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+<!-- Mirrored from facebook.github.io/react/docs/thinking-in-react.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Jan 2016 10:37:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Thinking in React | React</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:title" content="Thinking in React | React">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="thinking-in-react.html">
+  <meta property="og:image" content="../img/logo_og.png">
+  <meta property="og:description" content="A JavaScript library for building user interfaces">
+  <meta property="fb:app_id" content="623268441017527">
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="React" href="../feed.xml">
+
+  <link rel="stylesheet" href="../css/syntax.css">
+  <link rel="stylesheet" href="../css/codemirror.css">
+  <link rel="stylesheet" href="../css/react.css">
+
+  <script src="../../../use.typekit.net/vqa1hcx.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
+  <!--[if lte IE 8]>
+  <script src="/react/js/html5shiv.min.js"></script>
+  <script src="/react/js/es5-shim.min.js"></script>
+  <script src="/react/js/es5-sham.min.js"></script>
+  <![endif]-->
+  <script src="../js/codemirror.js"></script>
+  <script src="../js/javascript.js"></script>
+  <script src="../js/react.js"></script>
+  <script src="../js/react-dom.js"></script>
+  <script src="../js/babel-browser.min.js"></script>
+  <script src="../js/live_editor.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="nav-main">
+      <div class="wrap"> <a class="nav-home" href="../index-2.html"> <img src="img/logo.svg" alt="" width="36" height="36" class="nav-logo"> React </a>
+        <ul class="nav-site nav-site-internal">
+          <li><a href="../docs/getting-started.html">Documentação</a></li>
+          <li><a href="../support.html">Apoio</a></li>
+          <li><a href="../downloads.html">Baixar</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+        </ul>
+        <ul class="nav-site nav-site-external">
+          <li><a href="https://github.com/facebook/react">GitHub</a></li>
+          <li><a href="https://facebook.github.io/react-native/">React Native</a></li>
+        </ul>
+      </div>
+    </div>
+
+    
+
+    <section class="content wrap documentationContent">
+      <div class="nav-docs">
+        <!-- Docs Nav -->
+        <div class="nav-docs-section">
+          <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">ComeÇo rÁpido</span></h3>
+          <ul>
+            <li> <a href="getting-started.html" class="active">Começando</a> </li>
+            <li> <a href="tutorial.html">Tutorial</a> </li>
+            <li> <a href="thinking-in-react.html">Pensando em React</a> </li>
+          </ul>
+        </div>
+        <div class="nav-docs-section">
+          <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Recursos da Comunidade</span></h3>
+          <ul>
+            <li> <a href="conferences.html">Conferências</a> </li>
+            <li> <a href="videos.html">Videos</a> </li>
+            <li> <a href="complementary-tools.html">Ferramentas complementares</a> </li>
+            <li> <a href="examples.html">Exemplos</a> </li>
+          </ul>
+        </div>
+        <div class="nav-docs-section">
+          <h3>Guides</h3>
+          <ul>
+            <li> <a href="why-react.html">PQ React?</a> </li>
+            <li> <a href="displaying-data.html">Exibindo dados</a>
+              <ul>
+                <li> <a href="jsx-in-depth.html">JSX em Profundidade</a> </li>
+                <li> <a href="jsx-spread.html">JSX Atributos de Spread</a> </li>
+                <li> <a href="jsx-gotchas.html">JSX Gotchas</a> </li>
+              </ul>
+            </li>
+            <li> <a href="interactivity-and-dynamic-uis.html">Interatividade e Uis Dinâmico</a> </li>
+            <li> <a href="multiple-components.html">Vários componentes</a> </li>
+            <li> <a href="reusable-components.html">Componentes reutilizável</a> </li>
+            <li> <a href="transferring-props.html">Transferindo Props</a> </li>
+            <li> <a href="forms.html">Formulários</a> </li>
+            <li> <a href="working-with-the-browser.html">Trabalhando com o Navegador</a>
+              <ul>
+                <li> <a href="more-about-refs.html">Refs Para componentes</a> </li>
+              </ul>
+            </li>
+            <li> <a href="tooling-integration.html">Tooling Integração</a> </li>
+            <li> <a href="addons.html">Add-Ons</a>
+              <ul>
+                <li> <a href="animation.html">Animação</a> </li>
+                <li> <a href="two-way-binding-helpers.html">Two-Way Binding Helpers</a> </li>
+                <li> <a href="test-utils.html">Utilitários de Teste</a> </li>
+                <li> <a href="clone-with-props.html">Elementos Clonagem </a> </li>
+                <li> <a href="create-fragment.html">Fragmentos Chaveados</a> </li>
+                <li> <a href="update.html">Imutabilidade Helpers</a> </li>
+                <li> <a href="pure-render-mixin.html">PureRenderMixin</a> </li>
+                <li> <a href="perf.html">Ferramentas de desenpenho</a> </li>
+                <li> <a href="shallow-compare.html">Shallow Compare</a> </li>
+              </ul>
+            </li>
+            <li> <a href="advanced-performance.html">Advanced Performance</a> </li>
+            <li> <a href="context.html">Contexto</a> </li>
+          </ul>
+        </div>
+        <div class="nav-docs-section">
+          <h3><span onmouseover="_tipon(this)" onmouseout="_tipoff()">Referência</span></h3>
+          <ul>
+            <li> <a href="top-level-api.html">Top-Level API</a> </li>
+            <li> <a href="component-api.html">Component API</a> </li>
+            <li> <a href="component-specs.html">Componente especificação e ciclo de vida</a> </li>
+            <li> <a href="tags-and-attributes.html">Marcaçôes suportadas e atributos</a> </li>
+            <li> <a href="events.html">Sistema de eventos</a> </li>
+            <li> <a href="dom-differences.html">Diferenças do DOM </a> </li>
+            <li> <a href="special-non-dom-attributes.html">Especial não-DOM Atributos</a> </li>
+            <li> <a href="reconciliation.html">Reconciliação</a> </li>
+            <li> <a href="webcomponents.html">Web Components</a> </li>
+            <li> <a href="glossary.html">React (Virtual) DOM Tecnologia</a> </li>
+          </ul>
+        </div>
+        <div class="nav-docs-section">
+          <h3>Fluxo</h3>
+          <ul>
+            <li> <a href="https://facebook.github.io/flux/docs/overview.html">Flux Overview</a> </li>
+            <li> <a href="https://facebook.github.io/flux/docs/todo-list.html">Flux TodoMVC Tutorial</a> </li>
+          </ul>
+        </div>
+        <!-- Tips Nav -->
+        <div class="nav-docs-section">
+          <h3>Dicas</h3>
+          <ul>
+            <li> <a href="../tips/introduction.html">Introdução</a> </li>
+            <li> <a href="../tips/inline-styles.html">Inline Styles</a> </li>
+            <li> <a href="../tips/if-else-in-JSX.html">If-Else in JSX</a> </li>
+            <li> <a href="../tips/self-closing-tag.html">Self-Closing Tag</a> </li>
+            <li> <a href="../tips/maximum-number-of-jsx-root-nodes.html">Número máximo de JSX Root Nodes</a> </li>
+            <li> <a href="../tips/style-props-value-px.html">Taquigrafia para especificar  Pixel Valores em style props</a> </li>
+            <li> <a href="../tips/children-props-type.html">Tipos de adereços crianças (props)</a> </li>
+            <li> <a href="../tips/controlled-input-null-value.html">Valor de null para a entrada controlada</a> </li>
+            <li> <a href="../tips/componentWillReceiveProps-not-triggered-after-mounting.html">componentWillReceiveProps Não encadeado após montagem</a> </li>
+            <li> <a href="../tips/props-in-getInitialState-as-anti-pattern.html">Props em getInitialState é um Anti-Pattern</a> </li>
+            <li> <a href="../tips/dom-event-listeners.html">Ouvintes DOM de eventos em componentes</a> </li>
+            <li> <a href="../tips/initial-ajax.html">Carregar dados inicial via AJAX</a> </li>
+            <li> <a href="../tips/false-in-jsx.html">Falso em JSX</a> </li>
+            <li> <a href="../tips/communicate-between-components.html">Comunique se entre os componentes</a> </li>
+            <li> <a href="../tips/expose-component-functions.html">Expor as funçôes dos componentes</a> </li>
+            <li> <a href="../tips/children-undefined.html">this.props.children undefined</a> </li>
+            <li> <a href="../tips/use-react-with-other-libraries.html">Use React com outras Bibliotecas</a> </li>
+            <li> <a href="../tips/dangerously-set-inner-html.html">Perigosamente Set innerHTML</a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="inner-content">
+    <h1>
+      <span onmouseover="_tipon(this)" onmouseout="_tipoff()">Pensando em</span> React <a class="edit-page-link" href="https://github.com/facebook/react/tree/master/docs/docs/thinking-in-react.md" target="_blank">Edit on GitHub</a>
+    </h1>
+    <div class="subHeader"></div>
+    <p><span onmouseover="_tipon(this)" onmouseout="_tipoff()">por Pete Caça</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> react é, na minha opinião, o caminho do premier para construir grandes aplicativos da Web rápidos com JavaScript.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Ele escalou muito bem para nós no Facebook e Instagram.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Uma das muitas grandes partes do react é como ele faz você pensar sobre aplicativos como você construir eles.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Neste post, eu vou levá-lo através do processo de pensamento de   construir uma tabela de dados pesquisável usando o produto react.</span></p>
+<h2><a name="start-with-a-mock"></a> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Comece com um mock </span></h2>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Imagine que nós já temos uma API JSON e um mock do nosso designer.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Nosso designer aparentemente não é muito bom, porque a simulação parece com isso:</span></p>
+<p><img src="https://facebook.github.io/react/img/blog/thinking-in-react-mock.png" alt="Brincar"></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Nossa API JSON retorna alguns dados que se parece com isso:</span></p>
+<div class="highlight">
+  <pre><code class="language-text" data-lang="text">[
+  {category: &quot;Sporting Goods&quot;, price: &quot;$49.99&quot;, stocked: true, name: &quot;Football&quot;},
+  {category: &quot;Sporting Goods&quot;, price: &quot;$9.99&quot;, stocked: true, name: &quot;Baseball&quot;},
+  {category: &quot;Sporting Goods&quot;, price: &quot;$29.99&quot;, stocked: false, name: &quot;Basketball&quot;},
+  {category: &quot;Electronics&quot;, price: &quot;$99.99&quot;, stocked: true, name: &quot;iPod Touch&quot;},
+  {category: &quot;Electronics&quot;, price: &quot;$399.99&quot;, stocked: false, name: &quot;iPhone 5&quot;},
+  {category: &quot;Electronics&quot;, price: &quot;$199.99&quot;, stocked: true, name: &quot;Nexus 7&quot;}
+];
+</code></pre>
+</div>
+<p>&nbsp;</p>
+<h2><a name="step-1-break-the-ui-into-a-component-hierarchy"></a> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Passo 1: quebrar a interface do usuário em um componente hierarquia </span></h2>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> A primeira coisa que você vai querer fazer é desenhar caixas em torno   de cada componente (e subcomponente) na simulação e dar-lhes todos os   nomes.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Se você está trabalhando com um designer, eles podem já ter feito isso, então vá falar com eles!</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Seus nomes de camada do Photoshop pode acabar sendo os nomes de seus componentes React!</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Mas como você sabe o que deve ser o seu próprio componente?</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Basta usar as mesmas técnicas para decidir se você deve criar uma nova função ou objeto.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Uma dessas técnicas é o <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">princípio da responsabilidade individual,</a> ou seja, um componente deve, idealmente, faz uma coisa.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Se ele acaba crescendo, deve ser decomposto em subcomponentes menores.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Desde que você está muitas vezes exibindo um modelo de dados JSON para   um usuário, você vai descobrir que se o modelo foi construído   corretamente, a interface do usuário (e, portanto, sua estrutura de   componente) irá mapear bem.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Isso porque os modelos de interface do usuário e de dados tendem a aderir à mesma <em>arquitetura de informação,</em> o que significa que o trabalho de separar a interface do usuário em componentes é muitas vezes trivial.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Apenas dividi-lo em componentes que representam exatamente um pedaço de seu modelo de dados.</span></p>
+<p><img src="https://facebook.github.io/react/img/blog/thinking-in-react-components.png" alt="Diagrama de componentes"></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Você vai ver aqui que nós temos cinco componentes em nosso aplicativo simples.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Eu tenho em itálico os dados cada componente representa.</span></p>
+<ol>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> <strong>FilterableProductTable (laranja):</strong> contém a totalidade do exemplo</span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> <strong>SearchBar (azul):</strong> recebe toda <em>a entrada do usuário</em></span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> <strong>ProductTable (verde):</strong> monitores e filtra a <em>coleta de dados</em> com base <em>na</em> entrada do usuário</span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> <strong>ProductCategoryRow (turquesa):</strong> exibe um título para cada <em>categoria</em></span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> <strong>ProductRow (vermelho):</strong> exibe uma linha para cada <em>produto</em></span></li>
+</ol>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Se você olhar para ProductTable você vai ver que o cabeçalho da tabela (que contém o "Nome" e "preço" etiquetas) não é o seu próprio componente.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Esta é uma questão de preferência, e não há um argumento a ser feito de qualquer maneira.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Para este exemplo, eu deixei-o como parte de ProductTable porque é parte de tornar a <em>coleta de dados</em> que é ProductTable responsabilidade 's.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> No entanto, se este cabeçalho cresce para ser complexa (ou seja, se   fôssemos para adicionar affordances para classificar), ele certamente   faria sentido fazer esta a sua própria ProductTableHeader componente.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Agora que já identificou os componentes na nossa simulação, vamos organizá-los em uma hierarquia.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Isso é fácil.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Componentes que aparecem dentro de outro componente no simulado deve aparecer como uma criança na hierarquia:</span></p>
+<ul>
+  <li> FilterableProductTable
+    <ul>
+      <li> SearchBar </li>
+      <li> ProductTable
+        <ul>
+          <li> ProductCategoryRow </li>
+          <li> ProductRow </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<h2><a name="step-2-build-a-static-version-in-react"></a> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Passo 2: Criar uma versão estática em react </span></h2>
+<iframe src="https://translate.googleusercontent.com/translate_c?depth=1&hl=pt-BR&ie=UTF8&langpair=auto%7Cpt-BR&rurl=translate.google.com.br&tbb=1&u=https://jsfiddle.net/reactjs/yun1vgqb/embedded/&usg=ALkJrhjJagrpnx6uVouDpGX6_UYNn-oLlA" allowfullscreen="allowfullscreen" frameborder="0" height="600" width="100%"></iframe>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Agora que você tem a sua hierarquia de componentes, é hora de implementar o seu aplicativo.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> A maneira mais fácil é construir uma versão que leva o seu modelo de   dados e torna a interface do usuário, mas não tem interatividade.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> É melhor separar esses processos porque construir uma versão estática   requer um monte de digitação e sem pensar, e adicionar interatividade   requer um monte de pensamento e não um monte de digitação.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Vamos ver o porquê.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Para construir uma versão estática do seu aplicativo que processa o seu   modelo de dados, você vai querer construir componentes que reutilizam   outros componentes e transmitir dados usando <em>adereços.</em> <em>Adereços</em> são uma forma de passar dados de pai para filho.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Se você estiver familiarizado com o conceito de <em><strong>estado,</strong></em> não use <strong>estado em tudo</strong> para construir esta versão estática.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Estado é reservado apenas para a interatividade, ou seja, dados que mudam ao longo do tempo.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Uma vez que esta é uma versão estática do aplicativo, você não precisa dele.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Você pode construir de cima para baixo ou de baixo para cima.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Ou seja, você pode começar com a construção dos componentes mais acima na hierarquia (ou seja, começando com FilterableProductTable ou com os inferiores nele ProductRow</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Nos exemplos mais simples, normalmente é mais fácil ir de cima para   baixo, e em projetos maiores, é mais fácil ir de baixo para cima e   escrever testes como você construir.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> No final desta etapa, você terá uma biblioteca de componentes reutilizáveis ​​que prestam o seu modelo de dados.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Os componentes apenas terá render() métodos já que esta é uma versão estática do seu aplicativo.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> O componente no topo da hierarquia FilterableProductTable terá o seu modelo de dados como um adereço.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Se você fizer uma alteração em seu modelo de dados subjacente e chamar ReactDOM.render() novamente, a interface do usuário será atualizada.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> É fácil ver como a interface do usuário é atualizado e onde fazer alterações uma vez que não há nada de complicado acontecendo.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> De react <strong>de uma maneira de fluxo de dados</strong> (também chamado <em>de ligação one-way)</em> mantém tudo modular e rápido.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Basta referir aos <a href="/index.html">docs react</a> se você precisar de ajuda para executar esta etapa.</span></p>
+<h3><a name="a-brief-interlude-props-vs-state"></a> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Um breve interlúdio: adereços vs estado </span></h3>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Existem dois tipos de dados "modelo" em react: adereços e estado.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> É importante entender a distinção entre os dois;</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> skim <a href="/interactivity-and-dynamic-uis.html">o oficial react docs,</a> se você não tem certeza qual é a diferença.</span></p>
+<h2><a name="step-3-identify-the-minimal-but-complete-representation-of-ui-state"></a> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Passo 3: Identificar a representação mínima (mas completa) da interface do usuário do estado </span></h2>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Para tornar a sua interface de usuário interativa, você precisa ser   capaz de desencadear alterações ao seu modelo de dados subjacente.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> react torna isso fácil <strong>com</strong> o estado.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Para construir seu aplicativo corretamente, você primeiro precisa   pensar no conjunto mínimo de estado mutável que as suas necessidades de   aplicativos.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> A chave aqui é <em>DRY:</em> Do <em>not Repeat Yourself.</em></span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Descobrir a representação absoluta mínima das suas necessidades de   aplicação estaduais e calcular tudo o que você precisa on-demand.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Por exemplo, se você está construindo uma lista TODO, basta manter uma matriz dos itens TODO redor;</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> não manter uma variável de Estado separado para a contagem.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Em vez disso, quando você deseja processar a contagem TODO, basta levar o comprimento da matriz itens TODO.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Pense em todas as partes de dados em nossa aplicação exemplo.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Nós temos:</span></p>
+<ul>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> A lista original de produtos</span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> O texto busca que o usuário inseriu</span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> O valor da caixa de seleção</span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> A lista filtrada de produtos</span></li>
+</ul>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Vamos passar por cada um e descobrir qual é o estado.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Basta perguntar a três perguntas sobre cada pedaço de dados:</span></p>
+<ol>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> É aprovada em de um pai via adereços?</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Se assim for, provavelmente não é o estado.</span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Isso muda com o tempo?</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Se não for, provavelmente não é do Estado.</span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Você pode calcular-lo com base em qualquer outro estado ou adereços em seu componente?</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Se assim for, não do Estado.</span></li>
+</ol>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> A lista inicial de produtos é passado como adereços, de modo que não é Estado.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> O texto de pesquisa e na caixa de seleção parecem ser estado, uma vez   que mudar ao longo do tempo e não pode ser calculado a partir de nada.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> E, finalmente, a lista filtrada de produtos não é o estado, porque pode   ser calculado através da combinação da lista original de produtos com o   texto da pesquisa e do valor da caixa de seleção.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Então, finalmente, o nosso estado é:</span></p>
+<ul>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> O texto busca que o usuário inseriu</span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> O valor da caixa de seleção</span></li>
+</ul>
+<h2><a name="step-4-identify-where-your-state-should-live"></a> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Passo 4: Identificar onde o seu estado deve viver </span></h2>
+<iframe src="https://translate.googleusercontent.com/translate_c?depth=1&hl=pt-BR&ie=UTF8&langpair=auto%7Cpt-BR&rurl=translate.google.com.br&tbb=1&u=https://jsfiddle.net/reactjs/zafjbw1e/embedded/&usg=ALkJrhgUSUQ0H2lFCgm2Fz434Qs-VHbvSg" allowfullscreen="allowfullscreen" frameborder="0" height="600" width="100%"></iframe>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> OK, então nós identificamos que o conjunto mínimo de estado app é.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Em seguida, precisamos identificar mutação que o compõem, ou <em>detém,</em> neste estado.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Lembre-se: react é toda sobre one-way fluxo de dados para baixo na hierarquia do componente.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Pode não ser imediatamente claro qual componente deve possuir o estado <strong>Isso é muitas vezes a parte mais difícil para os recém-chegados para entender, por isso</strong> siga estes passos para descobrir isso.:</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Para cada parte do estado na sua aplicação:</span></p>
+<ul>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Identificar cada componente que torna algo com base nesse estado.</span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Encontre um componente proprietário comum (um componente único acima de   todos os componentes que precisam do Estado na hierarquia).</span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Ou o proprietário comum ou outro componente mais acima na hierarquia deve possuir o estado.</span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Se você não consegue encontrar um componente em que faz sentido para o   próprio estado, criar um novo componente simplesmente para manter o   estado e adicioná-lo em algum lugar na hierarquia acima do componente   comum proprietário.</span></li>
+</ul>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Vamos percorrer essa estratégia para a nossa aplicação:</span></p>
+<ul>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> ProductTable precisa filtrar a lista de produtos com base no estado e SearchBar precisa exibir o texto de pesquisa e estado selecionado.</span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> O componente comum proprietário é FilterableProductTable</span></li>
+  <li> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> É conceptualmente faz sentido para o texto do filtro e um valor marcado para viver em FilterableProductTable</span></li>
+</ul>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Legal, então nós decidimos que nossas vidas estaduais em FilterableProductTable</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Primeiro, adicione um getInitialState() método para FilterableProductTable que retorna {filterText: '', inStockOnly: false} para refletir o estado inicial de sua aplicação.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Em seguida, passe filterText e inStockOnly para ProductTable e SearchBar como um adereço.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Finalmente, usar esses adereços para filtrar as linhas em ProductTable e defina os valores dos campos do formulário em SearchBar</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Você pode começar a ver como o aplicativo irá se comportar: set filterText a "ball" e atualizar o seu aplicativo.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Você verá que a tabela de dados é atualizado corretamente.</span></p>
+<h2><a name="step-5-add-inverse-data-flow"></a> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Passo 5: Adicionar inversa fluxo de dados </span></h2>
+<iframe src="https://translate.googleusercontent.com/translate_c?depth=1&hl=pt-BR&ie=UTF8&langpair=auto%7Cpt-BR&rurl=translate.google.com.br&tbb=1&u=https://jsfiddle.net/reactjs/n47gckhr/embedded/&usg=ALkJrhjCRN6kv_SiaB0clnxuuMPgpYkDkA" allowfullscreen="allowfullscreen" frameborder="0" height="600" width="100%"></iframe>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Até agora, nós construímos um aplicativo que processa corretamente como   uma função de adereços e estado fluindo para baixo na hierarquia.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Agora é hora de apoiar dados que fluem para o outro lado: os   componentes do formulário profundas na hierarquia precisa atualizar o   estado em FilterableProductTable</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> react torna este fluxo de dados explícita para tornar mais fácil para   entender como o seu programa funciona, mas exige um pouco mais de   digitação de ligação de dados tradicionais de duas vias.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> react fornece um add-on chamado ReactLink   para fazer esse padrão tão conveniente como a ligação de duas vias, mas   para o objetivo deste post, vamos manter tudo explícito.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Se você tentar digitar ou marque a caixa na versão atual do exemplo, você verá que react ignora sua entrada.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Isso é intencional, como temos definir o value prop da input a ser sempre igual ao state passado do FilterableProductTable</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Vamos pensar sobre o que queremos que aconteça.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Nós queremos ter certeza de que sempre que o usuário muda a forma, nós atualizamos o estado para refletir a entrada do usuário.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Dado que os componentes devem apenas atualizar seu próprio estado, FilterableProductTable vai passar uma chamada de retorno para SearchBar que dispara sempre que o estado deve ser atualizado.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Podemos usar o onChange evento nas entradas para ser notificado da mesma.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> E a chamada de retorno aprovada pelo FilterableProductTable chamará setState() eo aplicativo será atualizado.</span></p>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Embora isso soa complexo, é realmente apenas algumas linhas de código.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> E é realmente explícita como seus dados está fluindo ao longo do app.</span></p>
+<h2><a name="and-thats-it"></a> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> E é isso </span></h2>
+<p> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Esperemos que este lhe dá uma idéia de como pensar sobre a construção de componentes e aplicativos com react.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Embora possa ser um pouco mais digitação do que você está acostumado,   lembre-se de que o código é lido muito mais do que está escrito, e é   extremamente fácil de ler isto, código explícito modular.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> Como você começar a construir grandes bibliotecas de componentes, você   vai apreciar esta explicitação e modularidade, e com a reutilização de   código, suas linhas de código vai começar a encolher.</span> <span onmouseover="_tipon(this)" onmouseout="_tipoff()"> :)</span></p>
+
+
+    <div class="docs-prevnext">
+      
+        <a class="docs-prev" href="tutorial.html">&larr; Prev</a>
+      
+      
+        <a class="docs-next" href="conferences.html">Next &rarr;</a>
+      
+    </div>
+  </div>
+</section>
+
+
+    <footer class="wrap">
+      <div class="left">
+        A Facebook &amp; Instagram collaboration.<br>
+        <a href="../acknowledgements.html">Acknowledgements</a>
+      </div>
+      <div class="right">
+        &copy; 2013&ndash;2016 Facebook Inc.<br>
+        Documentation licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+      </div>
+    </footer>
+  </div>
+  <div id="fb-root"></div>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-41298772-1', 'facebook.github.io');
+    ga('send', 'pageview');
+
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "../../../connect.facebook.net/en_US/all.js#xfbml=1&appId=623268441017527";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+
+<!-- Mirrored from facebook.github.io/react/docs/thinking-in-react.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Jan 2016 10:37:35 GMT -->
+</html>
